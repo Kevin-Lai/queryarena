@@ -1,6 +1,6 @@
 class Api::SessionsController < ApplicationController
 
-    before_action :require_logged_in, only: [:destroy]
+    before_action :require_signed_in, only: [:destroy]
 
     def create
         @user = User.find_by_credentials(
@@ -9,7 +9,7 @@ class Api::SessionsController < ApplicationController
         )
 
         if @user
-            login(@user)
+            sign_in(@user)
             render "/api/users/show"
         else  
             render json: @user.errors.full_messages, status: 422
@@ -18,8 +18,8 @@ class Api::SessionsController < ApplicationController
     end
 
     def destroy
-        logout
-        render json: ['logout successful']
+        sign_out
+        render json: ['sign out successful']
     end
 end
 

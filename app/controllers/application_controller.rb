@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-    helper_method :current_user, :logged_in?
+    helper_method :current_user, :signed_in?
 
     # CRLLL
 
@@ -7,22 +7,22 @@ class ApplicationController < ActionController::Base
         @current_user ||= User.find_by(session_token: session[:session_token])
     end
 
-    def require_logged_in
-        unless logged_in?
-            render json: ['you are currently not logged in!']
+    def require_signed_in
+        unless signed_in?
+            render json: ['you are currently not signed in!']
         end
     end
     
-    def logged_in?
+    def signed_in?
         !!current_user
     end
 
-    def login(user)
+    def sign_in(user)
         @current_user = user
-        session[:session_token] = user.reset_session_token!
+        session[:session_token] = current_user.reset_session_token!
     end
 
-    def logout
+    def sign_out
         current_user.reset_session_token!
         session[:session_token] = nil
         @current_user = nil
