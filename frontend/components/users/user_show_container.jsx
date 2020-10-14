@@ -3,8 +3,9 @@ import { fetchUser } from '../../actions/user_actions';
 import UserShow from './user_show';
 
 const mstp = (state,ownProps) =>{
+    //debugger
     return {
-        user: state.users[ownProps.match.params.userId]
+        currentUserId: state.session.currentUserId
     }
 }
 

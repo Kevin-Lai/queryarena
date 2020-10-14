@@ -10,7 +10,9 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+// Jquery must be placed first - Kevin Lai
+//
+//= require jquery
 //= require rails-ujs
 //= require activestorage
 //= require_tree .
-//= require jquery

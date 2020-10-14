@@ -11,15 +11,16 @@ class Api::SessionsController < ApplicationController
         if @user
             sign_in(@user)
             render "/api/users/show"
-        else  
-            render json: @user.errors.full_messages, status: 422
+        else 
+            #debugger
+            render json: ["Invalid Username or Password. Please try again."], status: 401
         end
 
     end
 
     def destroy
         sign_out
-        render json: ['sign out successful']
+        render json: ['Sign Out Successful!']
     end
 end
 

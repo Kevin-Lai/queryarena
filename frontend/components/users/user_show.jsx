@@ -6,7 +6,7 @@ class UserShow extends React.Component{
     }
 
     componentDidMount(){
-        this.props.fetchUser(this.props.user.id);
+        this.props.fetchUser(this.props.currentUserId);
     }
 
     // Put into render later

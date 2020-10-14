@@ -16,9 +16,13 @@ class SessionForm extends React.Component{
         this.handleChange = this.handleChange.bind(this);
     }
 
-    handleSubmit(e){
-        //e.preventDefault();
+    componentDidMount(){
+        this.props.clearErrors();
+    }
 
+    handleSubmit(e){
+        e.preventDefault();
+        //debugger
         // if signUp() or signIn() is successful, then it will redirect to the user's show page.
         this.props.submitEvent(this.state).then( (user) =>
             this.props.history.push("/users/" + user.id)
@@ -26,20 +30,22 @@ class SessionForm extends React.Component{
     }
 
     handleChange(type){
-        return e => {
+        //debugger
+        return event => {
             this.setState({
-                [type]: e.currentTarget.value
+                [type]: event.currentTarget.value
             })
         }
     }
 
     render(){
+        //debugger
         if (this.props.formType === "Sign Up"){
             return (
                 <div>
                     <form onSubmit={this.handleSubmit}>
                         <h2>{this.props.formType}</h2>
-                        <label className="">Email: 
+                        <label>Email: 
                             <input type="email" value={this.state.email} onChange={this.handleChange("email")}/>
                         </label>
                         <label>Password: 
@@ -54,6 +60,7 @@ class SessionForm extends React.Component{
                         <input type="submit" value={this.props.formType}/>
                     </form>
                     <Link to="/signin">Already have an account?</Link>
+                    {this.props.errors}
                 </div>
             )
         }
@@ -63,14 +70,15 @@ class SessionForm extends React.Component{
                 <form onSubmit={this.handleSubmit}>
                     <h2>{this.props.formType}</h2>
                     <label>Email: 
-                        <input type="email"/>
+                        <input type="email" value={this.state.email} onChange={this.handleChange("email")}/>
                     </label>
                     <label>Password: 
-                        <input type="password"/>
+                        <input type="password" value={this.state.password} onChange={this.handleChange("password")}/>
                     </label>
                     <input type="submit" value={this.props.formType}/>
                 </form>
                 <Link to="/signup">Don't have an account?</Link>
+                {this.props.errors}
             </div>
 
         )

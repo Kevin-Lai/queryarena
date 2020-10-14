@@ -5,19 +5,19 @@ import {
 
 // Session should contain the current user's id
 const _nullSession = {
-    id: null
+    currentUserId: null
 };
 
 const SessionReducer = (state = _nullSession, action) => {
-    Object.freeze(state);
     let newState = Object.assign({},state);
-
-    //debugger
+    Object.freeze(state);
 
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
+            debugger
+
             // the user is the prop from the session_actions
-            newState[id] = action.user.id;
+            newState = {currentUserId: action.user.id}
             return newState;
         case SIGNOUT_CURRENT_USER:
             return _nullSession;

@@ -29,8 +29,8 @@ class User < ApplicationRecord
 
     # SPIRE
 
-    def self.find_by_credentials(username, password)
-        @user = User.find_by(username: username)
+    def self.find_by_credentials(email, password)
+        @user = User.find_by(email: email)
         if @user && @user.is_password?(password)
             @user
         else

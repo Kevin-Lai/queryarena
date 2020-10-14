@@ -20,10 +20,10 @@ const signOutCurrentUser = () => {
 }
 
 
-const receiveErrors = errors => {
+const receiveErrors = (errors) => {
     return {
         type: RECEIVE_ERRORS,
-        errors: errors
+        errors
     };
 };
   
@@ -34,17 +34,28 @@ const receiveErrors = errors => {
 
 export const signUp = (user) => {
     return (dispatch) => {
-        return SessionAPIUtil.signUp(user).then( (user) => {
-            return dispatch(receiveCurrentUser(user));
-        })
+        return SessionAPIUtil.signUp(user).then(
+            (user) => {
+                return dispatch(receiveCurrentUser(user));
+            },
+            (errors) => {
+                return dispatch(receiveErrors(errors.responseJSON))
+            }
+        )
     }
 }
 
 export const signIn = (user) => {
     return (dispatch) => {
-        return SessionAPIUtil.signIn(user).then((user) => {
-            return dispatch(receiveCurrentUser(user))
-        })
+        return SessionAPIUtil.signIn(user).then(
+            (user) => {
+                return dispatch(receiveCurrentUser(user))
+            },
+            (errors) => {
+                //debugger
+                return dispatch(receiveErrors(errors.responseJSON))
+            }
+        )
     }
 }
 
