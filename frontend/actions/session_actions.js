@@ -6,10 +6,10 @@ export const SIGNOUT_CURRENT_USER = "SIGNOUT_CURRENT_USER";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 export const CLEAR_ERRORS = "CLEAR_ERRORS";
 
-const receiveCurrentUser = (user) => {
+const receiveCurrentUser = (currentUser) => {
     return {
         type: RECEIVE_CURRENT_USER,
-        user
+        currentUser
     }
 }
 

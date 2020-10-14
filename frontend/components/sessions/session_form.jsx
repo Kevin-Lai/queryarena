@@ -24,8 +24,10 @@ class SessionForm extends React.Component{
         e.preventDefault();
         //debugger
         // if signUp() or signIn() is successful, then it will redirect to the user's show page.
-        this.props.submitEvent(this.state).then( (user) =>
-            this.props.history.push("/users/" + user.id)
+        this.props.submitEvent(this.state).then( (action) => {
+                //debugger
+                return this.props.history.push("/users/" + action.currentUser.id)
+            }
         );
     }
 

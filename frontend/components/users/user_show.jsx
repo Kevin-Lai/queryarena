@@ -2,11 +2,22 @@ import React from 'react';
 
 class UserShow extends React.Component{
     constructor(props){
-        super(props)
+        super(props);
+
+        this.handleClick = this.handleClick.bind(this);
     }
 
     componentDidMount(){
+        //debugger
+
+        // prior to fetching the user, the user did not exist in the state.entities.user slice of state.
         this.props.fetchUser(this.props.currentUserId);
+    }
+
+    handleClick(){
+        this.props.signOut().then( () =>
+            this.props.history.push("/")
+        );
     }
 
     // Put into render later
@@ -14,9 +25,15 @@ class UserShow extends React.Component{
     // {this.props.user.lastName}
 
     render(){
+        // don't render until user has been fetched
+        if (!this.props.user){
+            return null;
+        }
+
         return (
             <div>
-                <h1>User Show Page</h1>
+                <h1>Welcome {this.props.user.first_name + " " + this.props.user.last_name}</h1>
+                <button onClick={()=>this.handleClick()}>Sign Out</button>
             </div>
         )
     }
