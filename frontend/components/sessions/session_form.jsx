@@ -10,33 +10,51 @@ class SessionForm extends React.Component{
             first_name: "",
             last_name: ""
         };
+
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleSubmit(e){
-        e.preventDefault();
+        //e.preventDefault();
 
+        // if signUp() or signIn() is successful, then it will redirect to the user's show page.
         this.props.submitEvent(this.state).then( (user) =>
             this.props.history.push("/users/" + user.id)
         );
     }
 
     render(){
+        if (this.props.formType === "Sign Up"){
+            return (
+                <form onSubmit={this.handleSubmit}>
+                    <h2>{this.props.formType}</h2>
+                    <label>Email: 
+                        <input type="email"/>
+                    </label>
+                    <label>Password: 
+                        <input type="password"/>
+                    </label>
+                    <label>First Name: 
+                        <input type="text"/>
+                    </label>
+                    <label>Last Name: 
+                        <input type="text"/>
+                    </label>
+                    <input type="submit" value={this.props.formType}/>
+                </form>
+            )
+        }
+
         return (
             <form onSubmit={this.handleSubmit}>
                 <h2>{this.props.formType}</h2>
-                <label>Email
-                    <input type=""></input>
+                <label>Email: 
+                    <input type="email"/>
                 </label>
-                <label>Password
-
+                <label>Password: 
+                    <input type="password"/>
                 </label>
-                <label>First Name
-
-                </label>
-                <label>Last Name
-
-                </label>
-                <input type="submit">{this.props.formType}</input>
+                <input type="submit" value={this.props.formType}/>
             </form>
         )
     }

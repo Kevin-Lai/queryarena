@@ -1,5 +1,3 @@
-import { $CombinedState } from "redux"
-
 export const signUp = (user) => {
     return $.ajax({
         method: "POST",
