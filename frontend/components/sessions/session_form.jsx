@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class SessionForm extends React.Component{
     constructor(props){
@@ -12,6 +13,7 @@ class SessionForm extends React.Component{
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
 
     handleSubmit(e){
@@ -23,9 +25,41 @@ class SessionForm extends React.Component{
         );
     }
 
+    handleChange(type){
+        return e => {
+            this.setState({
+                [type]: e.currentTarget.value
+            })
+        }
+    }
+
     render(){
         if (this.props.formType === "Sign Up"){
             return (
+                <div>
+                    <form onSubmit={this.handleSubmit}>
+                        <h2>{this.props.formType}</h2>
+                        <label className="">Email: 
+                            <input type="email" value={this.state.email} onChange={this.handleChange("email")}/>
+                        </label>
+                        <label>Password: 
+                            <input type="password" value={this.state.password} onChange={this.handleChange("password")}/>
+                        </label>
+                        <label>First Name: 
+                            <input type="text" value={this.state.first_name} onChange={this.handleChange("first_name")}/>
+                        </label>
+                        <label>Last Name: 
+                            <input type="text" value={this.state.last_name} onChange={this.handleChange("last_name")}/>
+                        </label>
+                        <input type="submit" value={this.props.formType}/>
+                    </form>
+                    <Link to="/signin">Already have an account?</Link>
+                </div>
+            )
+        }
+
+        return (
+            <div>
                 <form onSubmit={this.handleSubmit}>
                     <h2>{this.props.formType}</h2>
                     <label>Email: 
@@ -34,28 +68,11 @@ class SessionForm extends React.Component{
                     <label>Password: 
                         <input type="password"/>
                     </label>
-                    <label>First Name: 
-                        <input type="text"/>
-                    </label>
-                    <label>Last Name: 
-                        <input type="text"/>
-                    </label>
                     <input type="submit" value={this.props.formType}/>
                 </form>
-            )
-        }
+                <Link to="/signup">Don't have an account?</Link>
+            </div>
 
-        return (
-            <form onSubmit={this.handleSubmit}>
-                <h2>{this.props.formType}</h2>
-                <label>Email: 
-                    <input type="email"/>
-                </label>
-                <label>Password: 
-                    <input type="password"/>
-                </label>
-                <input type="submit" value={this.props.formType}/>
-            </form>
         )
     }
 }

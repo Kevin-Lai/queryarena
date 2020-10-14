@@ -16,7 +16,9 @@ const App = ({ children }) => (
     <h2>Query Arena</h2>
     <Switch>
       <Route exact path="/" component={SignInFormContainer} />
-      {/* <Route exact path="/users/:userId" component={UserShowContainer} /> */}
+      <Route exact path="/users/:userId" component={UserShowContainer} />
+      <Route path="/signup" component={SignUpFormContainer} />
+      <Route path="/signin" component={SignInFormContainer} />
     </Switch>
   </div>
 );
