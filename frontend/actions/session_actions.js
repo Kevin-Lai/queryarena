@@ -3,6 +3,9 @@ import * as SessionAPIUtil from '../util/session_api_util';
 export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const SIGNOUT_CURRENT_USER = "SIGNOUT_CURRENT_USER";
 
+export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
+export const CLEAR_ERRORS = "CLEAR_ERRORS";
+
 const receiveCurrentUser = (user) => {
     return {
         type: RECEIVE_CURRENT_USER,
@@ -15,6 +18,15 @@ const signOutCurrentUser = () => {
         type: SIGNOUT_CURRENT_USER
     }
 }
+
+
+const receiveErrors = errors => {
+    return {
+        type: RECEIVE_ERRORS,
+        errors: errors
+    };
+};
+  
 
 // signUp(user)
 // signIn(user)
@@ -41,5 +53,11 @@ export const signOut = () => {
         return SessionAPIUtil.signOut().then(() => {
             return dispatch(signOutCurrentUser())
         })
+    }
+}
+
+export const clearErrors = () => {
+    return (dispatch) => {
+        return dispatch(receiveErrors( [] ));
     }
 }
