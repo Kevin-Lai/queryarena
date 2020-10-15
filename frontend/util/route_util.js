@@ -3,12 +3,14 @@ import { connect } from 'react-redux';
 import { Redirect, Route, withRouter } from 'react-router-dom';
 
 const mstp = (state) => {
+    //debugger
     return {
         signedIn: Boolean(state.session.currentUserId)
     }
 }
 
 const Auth = ({ signedIn, path, component: Component }) => {
+    //debugger
     return (
         <Route path={path}
             render={ props => (

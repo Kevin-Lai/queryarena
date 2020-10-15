@@ -16,10 +16,10 @@ const App = ({ children }) => (
   <div>
     <h2>Query Arena</h2>
     <Switch>
-      <Route exact path="/" component={SignInFormContainer} />
       <Route exact path="/users/:userId" component={UserShowContainer} />
       <AuthRoute path="/signup" component={SignUpFormContainer} />
       <AuthRoute path="/signin" component={SignInFormContainer} />
+      <Route path="/" component={SignInFormContainer} />
     </Switch>
   </div>
 );
