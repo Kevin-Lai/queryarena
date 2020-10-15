@@ -9,17 +9,22 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 
 import UserShowContainer from './users/user_show_container';
-import SignUpFormContainer from './sessions/sign_up_form_container';
-import SignInFormContainer from './sessions/sign_in_form_container';
+// import SignUpFormContainer from './session/sign_up_form_container';
+// import SignInFormContainer from './session/sign_in_form_container';
+
+import SessionFormContainer from "./session/session_form_container";
 
 const App = ({ children }) => (
   <div>
     <h2>Query Arena</h2>
     <Switch>
       <Route exact path="/users/:userId" component={UserShowContainer} />
-      <AuthRoute path="/signup" component={SignUpFormContainer} />
-      <AuthRoute path="/signin" component={SignInFormContainer} />
-      <Route path="/" component={SignInFormContainer} />
+      {/* <AuthRoute path="/signup" component={SignUpFormContainer} />
+      <AuthRoute path="/signin" component={SignInFormContainer} /> */}
+      <AuthRoute path="/signup" component={SessionFormContainer} />
+      <AuthRoute path="/signin" component={SessionFormContainer} />
+      {/* <Route path="/" component={SignInFormContainer} /> */}
+      <Route path="/" component={SessionFormContainer} /> 
     </Switch>
   </div>
 );

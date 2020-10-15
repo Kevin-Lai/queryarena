@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-class SessionForm extends React.Component{
+class SignInForm extends React.Component{
     constructor(props){
         super(props);
 
@@ -32,16 +32,20 @@ class SessionForm extends React.Component{
         );
     }
 
-    handleChange(type){
+
+    handleChange(fieldType){
         //debugger
         return event => {
             this.setState({
-                [type]: event.currentTarget.value
-            })
+                [fieldType]: event.currentTarget.value
+            });
         }
     }
 
     handleDemo(e){
+        
+        //debugger
+
         this.state = {
             email: 'guest@queryarena.com',
             password: 'password',
@@ -56,42 +60,17 @@ class SessionForm extends React.Component{
 
     render(){
         //debugger
-        if (this.props.formType === "Sign Up"){
-            return (
-                <div>
-                    <form onSubmit={this.handleSubmit}>
-                        <h2>{this.props.formType}</h2>
-                        <label>Email: 
-                            <input type="email" value={this.state.email} onChange={this.handleChange("email")}/>
-                        </label>
-                        <label>Password: 
-                            <input type="password" value={this.state.password} onChange={this.handleChange("password")}/>
-                        </label>
-                        <label>First Name: 
-                            <input type="text" value={this.state.first_name} onChange={this.handleChange("first_name")}/>
-                        </label>
-                        <label>Last Name: 
-                            <input type="text" value={this.state.last_name} onChange={this.handleChange("last_name")}/>
-                        </label>
-                        <input type="submit" value={this.props.formType}/>
-                    </form>
-                    <Link to="/signin">Already have an account?</Link>
-                    {this.props.errors}
-                </div>
-            )
-        }
-
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <h2>{this.props.formType}</h2>
-                    <label>Email: 
+                    <label className="input-box">Email: 
                         <input type="email" value={this.state.email} onChange={this.handleChange("email")}/>
                     </label>
-                    <label>Password: 
+                    <label className="input-box">Password: 
                         <input type="password" value={this.state.password} onChange={this.handleChange("password")}/>
                     </label>
-                    <input type="submit" value={this.props.formType}/>
+                    <button>{this.props.formType}</button>
                 </form>
                 <Link to="/signup">Don't have an account?</Link>
                 <button onClick={(e)=>this.handleDemo(e)}>Demo Login</button>
@@ -102,4 +81,4 @@ class SessionForm extends React.Component{
     }
 }
 
-export default SessionForm;
+export default SignInForm;
