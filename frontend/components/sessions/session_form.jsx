@@ -14,6 +14,7 @@ class SessionForm extends React.Component{
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.handleDemo = this.handleDemo.bind(this);
     }
 
     componentDidMount(){
@@ -38,6 +39,19 @@ class SessionForm extends React.Component{
                 [type]: event.currentTarget.value
             })
         }
+    }
+
+    handleDemo(e){
+        this.state = {
+            email: 'guest@queryarena.com',
+            password: 'password',
+            first_name: "Guest",
+            last_name: "User"
+        };
+
+        // After setting the current state to the guest info,
+        // execute handleSubmit() to sign in the guest user
+        this.handleSubmit(e);
     }
 
     render(){
@@ -80,6 +94,7 @@ class SessionForm extends React.Component{
                     <input type="submit" value={this.props.formType}/>
                 </form>
                 <Link to="/signup">Don't have an account?</Link>
+                <button onClick={(e)=>this.handleDemo(e)}>Demo Login</button>
                 {this.props.errors}
             </div>
 

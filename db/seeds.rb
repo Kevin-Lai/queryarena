@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+User.delete_all
+# Question.destroy_all
+# Answer.destroy_all
+
+guest = User.create!(
+    email: 'guest@queryarena.com',
+    password: 'password',
+    first_name: "Guest",
+    last_name: "User"
+)
+
+
+#Question.create(user_id: guest.id, body: "What can you do at Query Arena?")

@@ -32,7 +32,7 @@ class UserShow extends React.Component{
 
         return (
             <div>
-                <h1>Welcome {this.props.user.first_name + " " + this.props.user.last_name}</h1>
+                <h1>{"Welcome " + this.props.user.first_name + " " + this.props.user.last_name + "!"}</h1>
                 <button onClick={()=>this.handleClick()}>Sign Out</button>
             </div>
         )
