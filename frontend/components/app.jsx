@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 // TODO: Later, the index page will be for the questions
 //import QuestionIndexContainer from './questions/question_index_container';
@@ -17,8 +18,8 @@ const App = ({ children }) => (
     <Switch>
       <Route exact path="/" component={SignInFormContainer} />
       <Route exact path="/users/:userId" component={UserShowContainer} />
-      <Route path="/signup" component={SignUpFormContainer} />
-      <Route path="/signin" component={SignInFormContainer} />
+      <AuthRoute path="/signup" component={SignUpFormContainer} />
+      <AuthRoute path="/signin" component={SignInFormContainer} />
     </Switch>
   </div>
 );
