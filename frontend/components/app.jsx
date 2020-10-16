@@ -16,7 +16,7 @@ import SessionFormContainer from "./session/session_form_container";
 
 const App = ({ children }) => (
   <div>
-    <h2>Query Arena</h2>
+    {/* <h2>Query Arena</h2> */}
     <Switch>
       <Route exact path="/users/:userId" component={UserShowContainer} />
       {/* <AuthRoute path="/signup" component={SignUpFormContainer} />

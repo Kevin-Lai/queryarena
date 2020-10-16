@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 class SignInForm extends React.Component{
     constructor(props){
@@ -61,19 +61,19 @@ class SignInForm extends React.Component{
     render(){
         //debugger
         return (
-            <div>
+            <div className="session-form">
                 <form onSubmit={this.handleSubmit}>
-                    <h2>{this.props.formType}</h2>
-                    <label className="input-box">Email: 
-                        <input type="email" value={this.state.email} onChange={this.handleChange("email")}/>
+                    <h2 className="session-title">{this.props.formType}</h2>
+                    <label className="input-box">
+                        <input type="email" placeholder="Email" value={this.state.email} onChange={this.handleChange("email")}/>
                     </label>
-                    <label className="input-box">Password: 
-                        <input type="password" value={this.state.password} onChange={this.handleChange("password")}/>
+                    <label className="input-box">
+                        <input type="password" placeholder="Password" value={this.state.password} onChange={this.handleChange("password")}/>
                     </label>
-                    <button>{this.props.formType}</button>
+                    <button className="submit-button">{this.props.formType}</button>
                 </form>
-                <Link to="/signup">Don't have an account?</Link>
-                <button onClick={(e)=>this.handleDemo(e)}>Demo Login</button>
+                {/* <Link to="/signup">Don't have an account?</Link> */}
+                <button className="demo-login-button" onClick={(e)=>this.handleDemo(e)}>Demo Login</button>
                 {this.props.errors}
             </div>
 
