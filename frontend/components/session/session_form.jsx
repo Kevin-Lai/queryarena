@@ -18,16 +18,18 @@ class SessionForm extends React.Component{
         // You need to load the "container" components (SignUpFormContainer and SignInFormContainer),
         // and NOT the "form" components (SignUpForm and SignInForm)
         return (
-            <div>
-                <div className="session-form-header">
-                    <h1 className="app-title">Query Arena</h1>
-                    <h2 className="app-description">A place to share knowledge and better understand the world</h2>
+            <div className="session-form-background">
+                <div className="session-center-block">
+                    <div className="session-form-header">
+                        <h1 className="app-title">Query Arena</h1>
+                        <h2 className="app-description">A place to share knowledge and better understand the world</h2>
+                    </div>
+                    <div className="main-session-forms">
+                        <SignUpFormContainer history={this.props.history}/>
+                        <SignInFormContainer history={this.props.history}/>
+                    </div>
+                    {this.props.errors}
                 </div>
-                <div className="main-session-forms">
-                    <SignUpFormContainer history={this.props.history}/>
-                    <SignInFormContainer history={this.props.history}/>
-                </div>
-                {this.props.errors}
             </div>
         )
     }

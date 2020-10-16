@@ -20,10 +20,6 @@ class UserShow extends React.Component{
         );
     }
 
-    // Put into render later
-    // {this.props.user.firstName}
-    // {this.props.user.lastName}
-
     render(){
         // don't render until user has been fetched
         if (!this.props.user){

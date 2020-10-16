@@ -10,11 +10,12 @@
 
 .session-form-header {
     height: 100px;
+    margin-bottom: 20px;
 }
 
 .session-form {
     display: block;
-    padding-left: 20px;
+    padding: 25px;
 }
 
 .session-title {
@@ -64,4 +65,22 @@ input[type=text], input[type=email], input[type=password] {
     border-radius: 3px;
     padding: 3px 7px 4px 7px;
     display: inline-block;
+}
+
+.session-form-background {
+    background-image: url("https://qsf.fs.quoracdn.net/-4-images.home.illo_1920.png-26-e9e6fbe02d908942.png");
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.session-center-block {
+    background-color: white;
+    width: 650px;
+    height: 400px;
+    margin-top: 100px;
+    padding-top: 25px;
+    border: 1px solid #e2e2e2;
+    box-shadow: 0 0 5px #888;
+    border-radius: 4px;
 }
