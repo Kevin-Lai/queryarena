@@ -74,7 +74,7 @@ class SignInForm extends React.Component{
                 </form>
                 {/* <Link to="/signup">Don't have an account?</Link> */}
                 <button className="demo-login-button" onClick={(e)=>this.handleDemo(e)}>Demo Login</button>
-                {this.props.errors}
+                {/* <div>{this.props.errors}</div> */}
             </div>
 
         )
