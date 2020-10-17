@@ -23,7 +23,6 @@ const App = ({ children }) => (
       <AuthRoute path="/signin" component={SignInFormContainer} /> */}
       <AuthRoute path="/signup" component={SessionFormContainer} />
       <AuthRoute path="/signin" component={SessionFormContainer} />
-      {/* <Route path="/" component={SignInFormContainer} /> */}
       <Route path="/" component={SessionFormContainer} /> 
     </Switch>
   </div>

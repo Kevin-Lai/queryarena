@@ -57,7 +57,10 @@ class SignUpForm extends React.Component{
                     <input type="email" className="input-box" value={this.state.email} onChange={this.handleChange("email")}/>
                     <label className="input-label">PASSWORD</label>
                     <input type="password" className="input-box" value={this.state.password} onChange={this.handleChange("password")}/>
-                    <button className="submit-button">{this.props.formType}</button>
+                    <div className="signup-submit-block">
+                        <label></label>
+                        <button className="submit-button">{this.props.formType}</button>
+                    </div>
                 </form>
                 {/* <Link to="/signin">Already have an account?</Link> */}
                 {/* <div>{this.props.errors}</div> */}

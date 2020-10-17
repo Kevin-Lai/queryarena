@@ -16,4 +16,7 @@
 
  @import "base/css-reset.scss";
 
+ // Needed to import the font before it can be used in the CSS file.
+ @import url('https://fonts.googleapis.com/css2?family=Noticia+Text&display=swap');
+ 
  @import "components/*";

@@ -64,13 +64,16 @@ class SignInForm extends React.Component{
             <div className="session-form">
                 <form onSubmit={this.handleSubmit}>
                     <h2 className="session-title">{this.props.formType}</h2>
-                    <label className="input-box">
+                    <label className="login-input-box">
                         <input type="email" placeholder="Email" value={this.state.email} onChange={this.handleChange("email")}/>
                     </label>
-                    <label className="input-box">
+                    <label className="login-password-box">
                         <input type="password" placeholder="Password" value={this.state.password} onChange={this.handleChange("password")}/>
                     </label>
-                    <button className="submit-button">{this.props.formType}</button>
+                    <div className="login-submit-block">
+                        <a href="#" className="forgot-password-link">Forgot Password?</a>
+                        <button className="submit-button">{this.props.formType}</button>
+                    </div>
                 </form>
                 {/* <Link to="/signup">Don't have an account?</Link> */}
                 <button className="demo-login-button" onClick={(e)=>this.handleDemo(e)}>Demo Login</button>
