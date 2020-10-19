@@ -28,9 +28,15 @@ class SessionForm extends React.Component{
                         <SignUpFormContainer history={this.props.history}/>
                         <SignInFormContainer history={this.props.history}/>
                     </div>
-                    <div>
-                        {this.props.errors}
-                    </div>
+
+                    {this.props.errors.length !== 0 ?
+                        <div className="session-errors">
+                            <div className="session-inner-errors">
+                                {this.props.errors}
+                            </div>
+                        </div>
+                    : null}
+
                 </div>
             </div>
         )
