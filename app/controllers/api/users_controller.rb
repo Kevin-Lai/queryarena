@@ -19,7 +19,12 @@ class Api::UsersController < ApplicationController
         @user = User.find_by(id: params[:id])
         #debugger
         # By default, there is an implicit "render :same_name_as_action"
-        render :show
+        if @user
+            render :show
+        else
+            # if user is not found, return 404 error
+            render json: @user.errors.full_messages, status: 404
+        end
     end
 
     private

@@ -21,7 +21,9 @@ class User < ApplicationRecord
     validates :password, length: {minimum: 6, allow_nil: true}
 
     # Model Associations - TODO: Leave blank for now
-
+    has_many :questions,
+        foreign_key: :user_id,
+        class_name: :Question
 
     # Getter for password
     attr_reader :password
