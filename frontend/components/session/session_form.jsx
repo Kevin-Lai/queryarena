@@ -15,6 +15,12 @@ class SessionForm extends React.Component{
     render(){
         //debugger
 
+        let errorsArray = this.props.errors.map( (el) => {
+            return(
+                <li>{el}</li>
+            )
+        })
+
         // You need to load the "container" components (SignUpFormContainer and SignInFormContainer),
         // and NOT the "form" components (SignUpForm and SignInForm)
         return (
@@ -32,7 +38,9 @@ class SessionForm extends React.Component{
                     {this.props.errors.length !== 0 ?
                         <div className="session-errors">
                             <div className="session-inner-errors">
-                                {this.props.errors}
+                                <ul>
+                                    {errorsArray}
+                                </ul>
                             </div>
                         </div>
                     : null}
