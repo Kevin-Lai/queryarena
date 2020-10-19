@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect} from 'react-router-dom';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -23,7 +23,8 @@ const App = ({ children }) => (
       <AuthRoute path="/signin" component={SignInFormContainer} /> */}
       <AuthRoute path="/signup" component={SessionFormContainer} />
       <AuthRoute path="/signin" component={SessionFormContainer} />
-      <Route path="/" component={SessionFormContainer} /> 
+      <Route exact path="/" component={SessionFormContainer} />
+      <Redirect from="/*" to="/"/>
     </Switch>
   </div>
 );
