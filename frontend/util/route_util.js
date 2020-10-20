@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect, Route, withRouter } from 'react-router-dom';
+import NavBarContainer from '../components/nav_bar/nav_bar_container';
+import SessionFormContainer from '../components/session/session_form_container';
 
 const mstp = (state) => {
     //debugger
@@ -11,6 +13,9 @@ const mstp = (state) => {
 
 const Auth = ({ signedIn, path, component: Component }) => {
     //debugger
+
+    // The user must NOT be signed in to access this route.
+    // If the user is signed in, then this route will no longer be accessable.
     return (
         <Route path={path}
             render={ props => (
@@ -22,10 +27,27 @@ const Auth = ({ signedIn, path, component: Component }) => {
 }
 
 const Protected = ({ signedIn, path, component: Component }) => {
+
+    // The user must be signed in to access this route.
+    // If the user is NOT signed in, then this route will no longer be accessable.
+    return (
+        <Route path={path}
+            render={ props => (
+            signedIn ? <Component {...props} /> : <Redirect to="/" />
+            )}
+        >
+        </Route>
+    )
+}
+
+const Entry = ({ signedIn, path }) => {
+
+    // The user must be signed in to access this route.
+    // If the user is NOT signed in, then this route will no longer be accessable.
     return (
         <Route path={path}
         render={ props => (
-            signedIn ? <Component {...props} /> : <Redirect to="/" />
+            signedIn ? <NavBarContainer history={props.history}/> : <SessionFormContainer history={props.history}/>
         )}
     >
     </Route>
@@ -34,3 +56,5 @@ const Protected = ({ signedIn, path, component: Component }) => {
 
 export const AuthRoute = withRouter(connect(mstp)(Auth));
 export const ProtectedRoute = withRouter(connect(mstp)(Protected));
+
+export const EntryRoute = withRouter(connect(mstp)(Entry));

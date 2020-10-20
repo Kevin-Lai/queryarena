@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import NavBar from '../nav_bar/nav_bar';
 
 class QuestionIndex extends React.Component{
     constructor(props){
@@ -20,7 +21,7 @@ class QuestionIndex extends React.Component{
         });
         return (
             <div>
-                <Link to="/questions/new">New Question</Link>
+                <NavBar/>
                 <ul>
                     {list}
                 </ul>

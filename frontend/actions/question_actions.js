@@ -29,7 +29,7 @@ export const fetchQuestions = () => {
 
 
 
-export const receiveQuestion = (questionId) => {
+export const fetchQuestion = (questionId) => {
     return (dispatch) => {
         return QuestionAPIUtil.fetchQuestion(questionId).then((question)=>{
                 return dispatch(receiveQuestion(question))
