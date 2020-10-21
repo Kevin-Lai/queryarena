@@ -22,14 +22,13 @@ class QuestionForm extends React.Component{
 
     handleSubmit(e){
         e.preventDefault();
-        this.props.createQuestion(this.state).then(this.props.closeModal);
+        // this.props.createQuestion(this.state).then(this.props.closeModal);
 
-        // this.props.createQuestion(this.state).then(
-        //     (action) => {
-        //         debugger
-        //         return this.props.history.push("/questions/" + action.question.id)
-        //     }
-        // ).then(this.props.closeModal);
+        this.props.createQuestion(this.state).then(
+            (action) => (
+                this.props.history.push(`/questions/${action.question.id}`)
+            )
+        ).then(this.props.closeModal);
     }
 
     render(){

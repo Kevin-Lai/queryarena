@@ -2,6 +2,9 @@ import { connect } from 'react-redux';
 import { closeModal } from '../../actions/modal_actions';
 import { createQuestion } from '../../actions/question_actions';
 
+// withRouter will give you access to the history, location, params
+import { withRouter } from 'react-router-dom'
+
 import QuestionForm from "./question_form"
 
 const mstp = (state,ownProps) =>{
@@ -22,4 +25,4 @@ const mdtp = (dispatch) => {
 }
 
 
-export default connect(mstp, mdtp)(QuestionForm);
+export default withRouter(connect(mstp, mdtp)(QuestionForm));

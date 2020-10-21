@@ -24,12 +24,16 @@ class QuestionIndex extends React.Component{
         return (
             <div className="question-index">
                 <NavBarContainer history={this.props.history}/>
-                <div className="create-question-index-block">
-                    <button className="create-question-button" onClick={() => this.props.openModal('Add Question')}>Add Question</button>
+                <div className="question-index-main-block">
+                    <div className="create-question-index-block">
+                        <button className="create-question-button" onClick={() => this.props.openModal('Add Question')}>What is your question or link?</button>
+                    </div>
+                    <div className="question-items-list-block">
+                        <ul className="question-items-list">
+                            {list}
+                        </ul>
+                    </div>
                 </div>
-                <ul>
-                    {list}
-                </ul>
             </div>
 
         )
