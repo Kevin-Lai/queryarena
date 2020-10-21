@@ -13,9 +13,10 @@ class QuestionIndex extends React.Component{
 
     render(){
         let list = this.props.questions.map((question)=>{
+            //debugger
             return(
-                <li>
-                    <Link to={"/questions/"+this.props.question.id}>{this.props.question.body}</Link>
+                <li className="question-item" key={question.id}>
+                    <Link to={"/questions/"+question.id}>{question.body}</Link>
                 </li>
             )
         });

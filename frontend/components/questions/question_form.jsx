@@ -27,8 +27,15 @@ class QuestionForm extends React.Component{
     render(){
         return (
             <div className="question-form">
+                <div className="question-create-title-block">
+                    <div className="question-create-title-bar">
+                        <label className="question-create-title">Add Question</label>
+                        <label className="question-create-share">Share Link</label>
+                    </div>
+                    <button className="question-create-x" onClick={() => this.props.closeModal()}>X</button>
+                </div>
+
                 <form onSubmit={this.handleSubmit()}>
-                    <h1>Add Question</h1>
                     <div>
                         <div className="question-guidelines">
                             <label className="question-guidelines-label">Tips on getting good answers quickly</label>
@@ -39,10 +46,13 @@ class QuestionForm extends React.Component{
                             </ul>
                         </div>
                     </div>
-                    <input type="text" value={this.state.body} onChange={this.handleChange("body")}></input>
-                    <div>
-                        <button onClick={() => this.props.closeModal()}>Cancel</button>
-                        <button>Add Question</button>
+                    <input className="question-body-input-box" placeholder={"Start your question with \"What\", \"How\", \"Why\", etc."} type="text" value={this.state.body} onChange={this.handleChange("body")}></input>
+                    <div className="question-create-buttons-block">
+                        <label></label>
+                        <div className="question-create-buttons">
+                            <button className="question-create-cancel-button" onClick={() => this.props.closeModal()}>Cancel</button>
+                            <button className="question-create-submit-button">Add Question</button>
+                        </div>
                     </div>
                 </form>
             </div>

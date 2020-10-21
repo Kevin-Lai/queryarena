@@ -9,7 +9,7 @@
 # TODO: Seed Questions and Answers for Guest User
 
 User.delete_all
-# Question.destroy_all
+Question.destroy_all
 # Answer.destroy_all
 
 guest = User.create!(
@@ -20,4 +20,4 @@ guest = User.create!(
 )
 
 
-#Question.create(user_id: guest.id, body: "What can you do at Query Arena?")
+Question.create(user_id: guest.id, body: "What is Query Arena?")
