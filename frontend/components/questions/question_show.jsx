@@ -17,10 +17,23 @@ class QuestionShow extends React.Component{
             return null;
         }
 
+        let list = (
+            <li className="question-item">Answer</li>
+        );
+
         return (
-            <div>
+            <div className="question-index">
                 <NavBarContainer />
-                <h1>{this.props.question.body}</h1>
+                <div>
+                    <div className="question-show-item-block">
+                        <h1 className="question-show-item">{this.props.question.body}</h1>
+                    </div>
+                    <div className="question-items-list-block">
+                        <ul className="question-items-list">
+                            {list}
+                        </ul>
+                    </div>
+                </div>
             </div>
         )
     }
