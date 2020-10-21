@@ -17,7 +17,7 @@
     display: inline-block;
 }
 
-.question-item, .create-question-button, .question-show-item{
+.question-item, .create-question-button, .question-show-item, .answer-item {
     background-color: white;
     width: 500px;
     padding-left: 16px;
@@ -28,9 +28,13 @@
     margin-top: 8px;
 }
 
-.question-item{
+.question-item, .answer-item {
     height: 100px;
     padding-top: 20px;
+}
+
+.question-item:hover{
+    text-decoration: underline;
 }
 
 .create-question-button{

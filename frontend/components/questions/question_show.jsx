@@ -18,7 +18,7 @@ class QuestionShow extends React.Component{
         }
 
         let list = (
-            <li className="question-item">Answer</li>
+            <li className="answer-item">Answer</li>
         );
 
         return (
