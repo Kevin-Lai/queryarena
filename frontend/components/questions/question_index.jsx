@@ -12,10 +12,10 @@ class QuestionIndex extends React.Component{
     }
 
     render(){
-        let list = this.props.questions.map((question)=>{
+        let list = this.props.questions.map((question, index)=>{
             //debugger
             return(
-                <li className="question-item" key={question.id}>
+                <li className="question-item" key={"question #" + index}>
                     <Link to={"/questions/"+question.id}>{question.body}</Link>
                 </li>
             )
@@ -23,7 +23,7 @@ class QuestionIndex extends React.Component{
         //debugger
         return (
             <div className="question-index">
-                <NavBarContainer history={this.props.history}/>
+                <NavBarContainer />
                 <div className="question-index-main-block">
                     <div className="create-question-index-block">
                         <button className="create-question-button" onClick={() => this.props.openModal('Add Question')}>What is your question or link?</button>

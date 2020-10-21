@@ -4,6 +4,9 @@ import { signOut } from '../../actions/session_actions';
 
 import { openModal } from "../../actions/modal_actions"
 
+// withRouter will give you access to the history, location, params
+import { withRouter } from 'react-router-dom'
+
 import NavBar from './nav_bar';
 
 const mstp = (state,ownProps) =>{
@@ -26,4 +29,4 @@ const mdtp = (dispatch) => {
 }
 
 
-export default connect(mstp, mdtp)(NavBar);
+export default withRouter(connect(mstp, mdtp)(NavBar));

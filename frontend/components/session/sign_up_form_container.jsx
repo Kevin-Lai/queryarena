@@ -2,6 +2,9 @@ import { connect } from 'react-redux';
 import { signUp, clearErrors } from '../../actions/session_actions';
 import SignUpForm from './sign_up_form';
 
+// withRouter will give you access to the history, location, params
+import { withRouter } from 'react-router-dom'
+
 const mstp = (state,ownProps) =>{
     return {
         formType: "Sign Up",
@@ -17,4 +20,4 @@ const mdtp = (dispatch) => {
 }
 
 
-export default connect(mstp, mdtp)(SignUpForm);
+export default withRouter(connect(mstp, mdtp)(SignUpForm));

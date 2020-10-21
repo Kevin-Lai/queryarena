@@ -19,7 +19,7 @@ class QuestionShow extends React.Component{
 
         return (
             <div>
-                <NavBarContainer history={this.props.history}/>
+                <NavBarContainer />
                 <h1>{this.props.question.body}</h1>
             </div>
         )

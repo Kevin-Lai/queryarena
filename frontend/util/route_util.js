@@ -47,7 +47,7 @@ const Entry = ({ signedIn, path }) => {
     return (
         <Route path={path}
         render={ props => (
-            signedIn ? <QuestionIndexContainer history={props.history}/> : <SessionFormContainer history={props.history}/>
+            signedIn ? <QuestionIndexContainer /> : <SessionFormContainer />
         )}
     >
     </Route>
