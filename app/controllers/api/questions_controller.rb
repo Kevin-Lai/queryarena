@@ -9,7 +9,9 @@ class Api::QuestionsController < ApplicationController
         @question.user_id = current_user.id
 
         if @question.save
-            redirect_to question_url(@question)
+            redirect_to api_question_url(@question)
+            #redirect_to api_question_url(@question.id)
+            # render "/api/questions/show"
         else
             render json: @question.errors.full_messages, status: 422
         end

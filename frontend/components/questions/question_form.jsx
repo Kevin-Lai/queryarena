@@ -20,8 +20,16 @@ class QuestionForm extends React.Component{
         }
     }
 
-    handleSubmit(){
+    handleSubmit(e){
+        e.preventDefault();
         this.props.createQuestion(this.state).then(this.props.closeModal);
+
+        // this.props.createQuestion(this.state).then(
+        //     (action) => {
+        //         debugger
+        //         return this.props.history.push("/questions/" + action.question.id)
+        //     }
+        // ).then(this.props.closeModal);
     }
 
     render(){
@@ -35,7 +43,7 @@ class QuestionForm extends React.Component{
                     <button className="question-create-x" onClick={() => this.props.closeModal()}>X</button>
                 </div>
 
-                <form onSubmit={this.handleSubmit()}>
+                <form onSubmit={this.handleSubmit}>
                     <div>
                         <div className="question-guidelines">
                             <label className="question-guidelines-label">Tips on getting good answers quickly</label>

@@ -12,6 +12,9 @@ import UserShowContainer from './users/user_show_container';
 import SessionFormContainer from "./session/session_form_container";
 import NavBarContainer from './nav_bar/nav_bar_container';
 
+import QuestionShowContainer from './questions/question_show_container';
+
+
 import Modal from "./modal/modal";
 
 const App = ({ children }) => (
@@ -22,6 +25,7 @@ const App = ({ children }) => (
     
     <Switch>
       <Route exact path="/users/:userId" component={UserShowContainer} />
+      <ProtectedRoute exact path="/questions/:questionId" component={QuestionShowContainer} />
       <AuthRoute path="/signup" component={SessionFormContainer} />
       <AuthRoute path="/signin" component={SessionFormContainer} />
 

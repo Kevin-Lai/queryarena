@@ -7,7 +7,7 @@ const mstp = (state,ownProps) =>{
     //debugger
 
     return {
-        question: state.entities[ownProps.match.params.questionId]
+        question: state.entities.questions[ownProps.match.params.questionId]
     }
 }
 
