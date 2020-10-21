@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect, Route, withRouter } from 'react-router-dom';
-import NavBarContainer from '../components/nav_bar/nav_bar_container';
 import SessionFormContainer from '../components/session/session_form_container';
+import QuestionIndexContainer from "../components/questions/question_index_container"
 
 const mstp = (state) => {
     //debugger
@@ -47,7 +47,7 @@ const Entry = ({ signedIn, path }) => {
     return (
         <Route path={path}
         render={ props => (
-            signedIn ? <NavBarContainer history={props.history}/> : <SessionFormContainer history={props.history}/>
+            signedIn ? <QuestionIndexContainer history={props.history}/> : <SessionFormContainer history={props.history}/>
         )}
     >
     </Route>

@@ -1,6 +1,5 @@
 .nav-button{
     // display: inline-block;
-
     padding: 5px;
 
     // Remove the colors later
@@ -11,4 +10,9 @@
 .nav-bar-buttons{
     display: flex;
     justify-content: center;
+}
+
+.nav-bar-block {
+    display: block;
+    background-color: white;
 }

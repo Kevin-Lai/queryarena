@@ -28,9 +28,22 @@ class QuestionForm extends React.Component{
         return (
             <div className="question-form">
                 <form onSubmit={this.handleSubmit()}>
-                    <h1>Create Question</h1>
+                    <h1>Add Question</h1>
+                    <div>
+                        <div className="question-guidelines">
+                            <label className="question-guidelines-label">Tips on getting good answers quickly</label>
+                            <ul className="question-guidelines-list">
+                                <li>Make sure your question has not been asked already</li>
+                                <li>Keep your question short and to the point</li>
+                                <li>Double-check grammar and spelling</li>
+                            </ul>
+                        </div>
+                    </div>
                     <input type="text" value={this.state.body} onChange={this.handleChange("body")}></input>
-                    <button>Create Question</button>
+                    <div>
+                        <button onClick={() => this.props.closeModal()}>Cancel</button>
+                        <button>Add Question</button>
+                    </div>
                 </form>
             </div>
         )

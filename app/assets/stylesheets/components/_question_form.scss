@@ -16,5 +16,28 @@
 }
 
 .question-form {
-    background-color: blue;
+    background-color: #f7f7f8;
+
+    box-sizing: border-box;
+    min-height: 400px;
+    max-height: 80vh;
+    max-width: 90vw;
+    width: 620px;
+    border-radius: 8px;
+}
+
+.question-guidelines {
+    color: #2e69ff;
+    background-color: rgb(217, 221, 252);
+    margin: 30px;
+    padding: 10px;
+}
+
+.question-guidelines-label{
+    font-weight: bolder;
+}
+
+.question-guidelines-list {
+    padding: 10px;
+    list-style: inside;
 }

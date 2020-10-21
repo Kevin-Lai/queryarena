@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavBar from '../nav_bar/nav_bar';
+import NavBarContainer from '../nav_bar/nav_bar_container';
 
 class QuestionIndex extends React.Component{
     constructor(props){
@@ -19,9 +19,13 @@ class QuestionIndex extends React.Component{
                 </li>
             )
         });
+        //debugger
         return (
-            <div>
-                <NavBar/>
+            <div className="question-index">
+                <NavBarContainer history={this.props.history}/>
+                <div className="create-question-index-block">
+                    <button className="create-question-button" onClick={() => this.props.openModal('Add Question')}>Add Question</button>
+                </div>
                 <ul>
                     {list}
                 </ul>

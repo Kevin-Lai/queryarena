@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { openModal } from '../../actions/modal_actions';
 import { fetchQuestions } from '../../actions/question_actions';
 import QuestionIndex from './question_index';
 
@@ -10,7 +11,8 @@ const mstp = (state) =>{
 
 const mdtp = (dispatch) => {
     return {
-        fetchQuestions: () => dispatch(fetchQuestions())
+        fetchQuestions: () => dispatch(fetchQuestions()),
+        openModal: modal => dispatch(openModal(modal))
     }
 }
 
