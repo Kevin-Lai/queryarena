@@ -26,6 +26,7 @@ class SearchBar extends React.Component{
 
     handleKeyDown(e){
         if(e.key === "Enter"){
+            //debugger
             this.props.history.push("/search?q="+this.state.query);
         }
     }
