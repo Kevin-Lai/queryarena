@@ -54,7 +54,12 @@ class SearchIndex extends React.Component{
             //debugger
             return(
                 <li className="question-item" key={"question #" + index}>
-                    <Link to={"/questions/"+question.id}>{question.body}</Link>
+                    <Link className="question-item-link" to={"/questions/"+question.id}>{question.body}</Link>
+                    <div className="question-item-buttons">
+                        <button className="question-create-cancel-button">📝 Answer</button>
+                        <button className="question-create-cancel-button">📶 Follow</button>
+                        <button className="question-create-cancel-button">✏️ Pass</button>
+                    </div>
                 </li>
             )
         });
