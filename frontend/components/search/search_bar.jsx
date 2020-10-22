@@ -8,8 +8,7 @@ class SearchBar extends React.Component{
         super(props);
 
         this.state = {
-            query: "",
-            results: ""
+            query: ""
         };
 
 
@@ -27,14 +26,14 @@ class SearchBar extends React.Component{
 
     handleKeyDown(e){
         if(e.key === "Enter"){
-            this.props.history.push("/search?q="+this.props.query);
+            this.props.history.push("/search?q="+this.state.query);
         }
     }
 
     render() {
         return (
-            <div>
-                <input type="text" placeholder="Search Query Arena" value={this.state.query} onChange={this.handleChange("query")} onKeyDown={this.handleKeyDown}/>
+            <div className="search-bar">
+                <input className="search-bar-input" type="text" placeholder="Search Query Arena" value={this.state.query} onChange={this.handleChange("query")} onKeyDown={this.handleKeyDown}/>
             </div>
         )
     }
@@ -42,5 +41,3 @@ class SearchBar extends React.Component{
 }
 
 export default withRouter(SearchBar);
-
-// export default SearchBar;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SearchBar from '../search/search_bar';
 
 class NavBar extends React.Component{
     constructor(props){
@@ -36,6 +37,7 @@ class NavBar extends React.Component{
                     <button className="nav-button">📝 Answer</button>
                     <button className="nav-button">👪 Spaces</button>
                     <button className="nav-button">🔔 Notifications</button>
+                    <SearchBar />
                     <div className="add-question-nav-button-block">
                         <button className="add-question-nav-button" onClick={() => this.props.openModal('Add Question')}>Add Question</button>
                     </div>
