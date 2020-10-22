@@ -17,6 +17,7 @@ class QuestionIndex extends React.Component{
             return(
                 <li className="question-item" key={"question #" + index}>
                     <Link className="question-item-link" to={"/questions/"+question.id}>{question.body}</Link>
+                    <div className="temp-space"></div>
                     <div className="question-item-buttons">
                         <button className="question-create-cancel-button">📝 Answer</button>
                         <button className="question-create-cancel-button">📶 Follow</button>
