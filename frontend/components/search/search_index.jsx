@@ -15,19 +15,6 @@ class SearchIndex extends React.Component{
         }
     }
 
-    // componentDidMount(){
-    //     let query = this.props.location.search.split("=")[1];
-    //     //debugger
-    //     this.props.searchQuery(query).then(
-    //         (action) => {
-    //             //debugger
-    //             this.setState({
-    //                 results: action.results
-    //             })
-    //         }
-    //     );
-    // }
-
     componentDidUpdate(prevProps){
         // debugger
 

@@ -13,7 +13,6 @@ class QuestionShow extends React.Component{
 
     componentDidMount(){
         //debugger
-        // this.props.fetchQuestion(this.props.match.params.questionId);
         this.props.fetchQuestion(this.props.match.params.questionId).then(
             (action) => {
                 this.setState(

@@ -26,7 +26,7 @@ const App = ({ children }) => (
       <AuthRoute path="/signup" component={SessionFormContainer} />
       <AuthRoute path="/signin" component={SessionFormContainer} />
       
-      {/* <ProtectedRoute exact path="/" component={NavBarContainer} />
+      {/* <ProtectedRoute exact path="/" component={ QuestionIndexContainer } />
       <AuthRoute exact path="/" component={ SessionFormContainer } /> */}
       <EntryRoute exact path="/"/>
 
