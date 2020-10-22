@@ -29,8 +29,13 @@ class QuestionShow extends React.Component{
             return null;
         }
 
-        let list = (
-            <li className="answer-item">Answer</li>
+        //debugger
+
+        let list = this.state.question.answers.map( (answer, index) => {
+                return (
+                    <li className="answer-item" key={"answer #" + index}>{answer.body}</li>
+                )
+            }
         );
 
         return (
