@@ -3,19 +3,13 @@ import { Route, Switch, Redirect} from 'react-router-dom';
 
 import { AuthRoute, ProtectedRoute, EntryRoute } from '../util/route_util';
 
-// TODO: Later, the index page will be for the questions
-//import QuestionIndexContainer from './questions/question_index_container';
-//       <Route exact path="/" component={QuestionIndexContainer} />
-
-
 import UserShowContainer from './users/user_show_container';
 import SessionFormContainer from "./session/session_form_container";
-import NavBarContainer from './nav_bar/nav_bar_container';
-
 import QuestionShowContainer from './questions/question_show_container';
 
-
 import Modal from "./modal/modal";
+
+import SearchIndexContainer from "./search/search_index_container";
 
 const App = ({ children }) => (
   <div>
@@ -26,9 +20,12 @@ const App = ({ children }) => (
     <Switch>
       <Route exact path="/users/:userId" component={UserShowContainer} />
       <ProtectedRoute exact path="/questions/:questionId" component={QuestionShowContainer} />
+      
+      <ProtectedRoute path="/search" component={SearchIndexContainer} />
+      
       <AuthRoute path="/signup" component={SessionFormContainer} />
       <AuthRoute path="/signin" component={SessionFormContainer} />
-
+      
       {/* <ProtectedRoute exact path="/" component={NavBarContainer} />
       <AuthRoute exact path="/" component={ SessionFormContainer } /> */}
       <EntryRoute exact path="/"/>
