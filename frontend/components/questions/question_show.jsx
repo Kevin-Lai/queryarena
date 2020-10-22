@@ -5,15 +5,28 @@ import NavBarContainer from '../nav_bar/nav_bar_container';
 class QuestionShow extends React.Component{
     constructor(props){
         super(props);
+
+        this.state = {
+            question: ""
+        }
     }
 
     componentDidMount(){
         //debugger
-        this.props.fetchQuestion(this.props.match.params.questionId);
+        // this.props.fetchQuestion(this.props.match.params.questionId);
+        this.props.fetchQuestion(this.props.match.params.questionId).then(
+            (action) => {
+                this.setState(
+                    {
+                        question: action.question
+                    }
+                )
+            }
+        );
     }
 
     render(){
-        if (!this.props.question){
+        if (!this.state.question){
             return null;
         }
 
@@ -26,7 +39,8 @@ class QuestionShow extends React.Component{
                 <NavBarContainer />
                 <div>
                     <div className="question-show-item-block">
-                        <h1 className="question-show-item">{this.props.question.body}</h1>
+                        {/* <h1 className="question-show-item">{this.props.question.body}</h1> */}
+                        <h1 className="question-show-item">{this.state.question.body}</h1>
                     </div>
                     <div className="question-items-list-block">
                         <ul className="question-items-list">
