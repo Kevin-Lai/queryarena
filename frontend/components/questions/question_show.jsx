@@ -43,7 +43,15 @@ class QuestionShow extends React.Component{
                 <NavBarContainer />
                 <div>
                     <div className="question-show-item-block">
-                        <h1 className="question-show-item">{this.state.question.body}</h1>
+                        <div className="question-item">
+                            <h1 className="question-show-item">{this.state.question.body}</h1>
+                            <div className="temp-space"></div>
+                            <div className="question-item-buttons">
+                                <button className="question-create-cancel-button">📝 Answer</button>
+                                <button className="question-create-cancel-button">📶 Follow</button>
+                                <button className="question-create-cancel-button">👤 Request</button>
+                            </div>
+                        </div>
                     </div>
                     <div className="question-items-list-block">
                         <ul className="question-items-list">
