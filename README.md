@@ -6,8 +6,7 @@
 * [Background](#background)
 * [Technologies](#technologies)
 * [Key Features](#key-features)
-  * [Account Creation - (Sign Up)](#account-creation)
-  * [Account Authentication - (Sign In)](#account-authentication)
+  * [Account Authentication - (Sign In / Sign Up)](#account-authentication)
   * [Questions](#questions)
   * [Search](#search)
   * [Answers](#answers)
@@ -26,12 +25,8 @@ QueryArena is a web application that allows users to ask questions and share ans
 
 ## Key Features
 
-### Account Creation
-* Users can sign up and create a new account on Query Arena.
-
----
-
 ### Account Authentication
+* Users can sign up and create a new account on Query Arena.
 * After creating an account, a user can sign in to access certain restricted features.
 * Users who do not want to create an account can try out the website by logging in as a demo user.
 * Once signed in, the splash page will change to the questions index page where the user can see all of the questions posted on the site.
