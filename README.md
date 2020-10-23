@@ -26,6 +26,7 @@ QueryArena is a web application that allows users to ask questions and share ans
 ## Key Features
 
 ### Account Authentication
+![Demo Login](https://github.com/Kevin-Lai/queryarena/blob/master/images/demo_login.gif)
 * Users can sign up and create a new account on Query Arena.
 * After creating an account, a user can sign in to access certain restricted features.
 * Users who do not want to create an account can try out the website by logging in as a demo user.
