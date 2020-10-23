@@ -1,6 +1,6 @@
 # Query Arena
 
-[QueryArena Live](https://query-arena.herokuapp.com/#/)
+[Query Arena Live](https://query-arena.herokuapp.com/#/)
 
 ## Table of Contents
 * [Background](#background)
