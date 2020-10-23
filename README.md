@@ -36,8 +36,12 @@ QueryArena is a web application that allows users to ask questions and share ans
 ---
 
 ### Questions
+![Show Question](https://github.com/Kevin-Lai/queryarena/blob/master/images/question_show.gif)
 * Users can view all of the questions posted to the website on the questions index page.
 * Users can view each question's individual show page by clicking on the question's text.
+
+#### Create Question
+![Create Question](https://github.com/Kevin-Lai/queryarena/blob/master/images/create_question.gif)
 * Users can create questions that will be posted to the website's questions index page.
 * The create question form is rendered on a modal React.js component.
 * Immediately after creating a question, the user will be redirected to their newly created question's show page.
@@ -45,6 +49,7 @@ QueryArena is a web application that allows users to ask questions and share ans
 ---
 
 ### Search
+![Search Question](https://github.com/Kevin-Lai/queryarena/blob/master/images/question_search.gif)
 * Users can search for questions by typing their query in the search bar.
 * Letter cases do not matter for the search.
 * Users will be redirected to a search results page after making a search.
