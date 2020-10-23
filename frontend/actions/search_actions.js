@@ -10,6 +10,7 @@ const receiveSearchResults = (results) => {
 }
 
 export const searchQuery = (query) => {
+    //debugger
     return (dispatch) => {
         return SearchAPIUtil.searchQuery(query).then(
             (results) => {

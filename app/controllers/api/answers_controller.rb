@@ -1,5 +1,9 @@
 class Api::AnswersController < ApplicationController
     
+    # index and show routes are unnecessary
+    # because the answers are shown on the same page
+    # as the question that they belong to
+
     def create
         @answer = Answer.new(answer_params)
         @answer.user_id = current_user.id
@@ -10,21 +14,6 @@ class Api::AnswersController < ApplicationController
             render json: @answer.errors.full_messages, status: 422
         end
 
-    end
-
-    def index
-        @answers = Answer.all.where(question_id: params[:question_id])
-        render :index
-    end
-
-    def show
-        @answer = Answer.includes(:question, :user).find_by(id: params[:id])
-        if @answer
-            render :show
-        else
-            # if question is not found, return 404 error
-            render json: @answer.errors.full_messages, status: 404
-        end
     end
 
     def update

@@ -21,7 +21,7 @@ class QuestionIndex extends React.Component{
                     <div className="question-item-buttons">
                         <button className="question-create-cancel-button">📝 Answer</button>
                         <button className="question-create-cancel-button">📶 Follow</button>
-                        <button className="question-create-cancel-button">✏️ Pass</button>
+                        <button className="question-create-cancel-button">👤 Request</button>
                     </div>
                 </li>
             )

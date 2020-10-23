@@ -15,17 +15,33 @@ class SearchIndex extends React.Component{
         }
     }
 
+    componentDidMount(){
+
+        let query = this.props.location.search.split("=")[1];
+
+        //debugger
+
+        this.props.searchQuery(query.toLowerCase()).then(
+            (action) => {
+            //debugger
+                this.setState({
+                    results: action.results
+                })
+            }
+        );
+    }
+
     componentDidUpdate(prevProps){
-        // debugger
+        //debugger
 
         let query = this.props.location.search.split("=")[1];
         let prevQuery = prevProps.location.search.split("=")[1];
 
         if (query !== prevQuery){
             //debugger
-            this.props.searchQuery(query).then(
+            this.props.searchQuery(query.toLowerCase()).then(
                 (action) => {
-                //debugger
+                debugger
                     this.setState({
                         results: action.results
                     })
