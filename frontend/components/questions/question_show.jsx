@@ -43,7 +43,6 @@ class QuestionShow extends React.Component{
                 <NavBarContainer />
                 <div>
                     <div className="question-show-item-block">
-                        {/* <h1 className="question-show-item">{this.props.question.body}</h1> */}
                         <h1 className="question-show-item">{this.state.question.body}</h1>
                     </div>
                     <div className="question-items-list-block">
