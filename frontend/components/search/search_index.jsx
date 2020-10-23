@@ -41,7 +41,7 @@ class SearchIndex extends React.Component{
             //debugger
             this.props.searchQuery(query.toLowerCase()).then(
                 (action) => {
-                debugger
+                //debugger
                     this.setState({
                         results: action.results
                     })
