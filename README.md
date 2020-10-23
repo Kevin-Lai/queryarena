@@ -6,7 +6,7 @@
 * [Background](#background)
 * [Technologies](#technologies)
 * [Key Features](#key-features)
-  * [Account Authentication - (Sign In / Sign Up)](#account-authentication)
+  * [User Authentication - (Sign In / Sign Up)](#user-authentication)
   * [Questions](#questions)
   * [Search](#search)
   * [Answers](#answers)
@@ -25,7 +25,7 @@ QueryArena is a web application that allows users to ask questions and share ans
 
 ## Key Features
 
-### Account Authentication
+### User Authentication
 ![Demo Login](https://github.com/Kevin-Lai/queryarena/blob/master/images/demo_login.gif)
 * Users can sign up and create a new account on Query Arena.
 * After creating an account, a user can sign in to access certain restricted features.
