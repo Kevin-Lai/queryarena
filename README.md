@@ -9,8 +9,8 @@
   * [Account Creation - (Sign Up)](#account-creation)
   * [Account Authentication - (Sign In)](#account-authentication)
   * [Questions](#questions)
-  * [Answers](#answers)
   * [Search](#search)
+  * [Answers](#answers)
 * [Future Planned Features](#future-planned-features)
 
 
