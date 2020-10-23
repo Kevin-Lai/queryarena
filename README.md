@@ -6,7 +6,7 @@
 * [Background](#background)
 * [Technologies](#technologies)
 * [Key Features](#key-features)
-  * [User Authentication - (Sign In / Sign Up)](#user-authentication)
+  * [User Authentication](#user-authentication)
   * [Questions](#questions)
   * [Search](#search)
   * [Answers](#answers)
