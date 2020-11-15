@@ -22,6 +22,7 @@ QueryArena is a web application that allows users to ask questions and share ans
 * React.js
 * Redux.js
 * CSS
+* HTML
 
 ## Key Features
 
