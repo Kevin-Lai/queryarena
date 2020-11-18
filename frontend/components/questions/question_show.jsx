@@ -24,6 +24,10 @@ class QuestionShow extends React.Component{
         );
     }
 
+    handleCreateAnswer(){
+
+    }
+
     render(){
         if (!this.state.question){
             return null;
@@ -47,7 +51,7 @@ class QuestionShow extends React.Component{
                             <h1 className="question-show-item">{this.state.question.body}</h1>
                             <div className="temp-space"></div>
                             <div className="question-item-buttons">
-                                <button className="question-create-cancel-button">📝 Answer</button>
+                                <button className="question-create-cancel-button" onClick={()=>this.handleCreateAnswer()}>📝 Answer</button>
                                 <button className="question-create-cancel-button">📶 Follow</button>
                                 <button className="question-create-cancel-button">👤 Request</button>
                             </div>
