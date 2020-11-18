@@ -7,7 +7,9 @@ class QuestionShow extends React.Component{
         super(props);
 
         this.state = {
-            question: ""
+            question: "",
+            answer: {},
+            showForm: false
         }
     }
 
@@ -24,8 +26,12 @@ class QuestionShow extends React.Component{
         );
     }
 
-    handleCreateAnswer(){
+    showAnswerForm(){
+        this.setState({showForm: true});
+    }
 
+    handleCreateAnswer(){
+        this.setState({showForm: false});
     }
 
     render(){
@@ -51,12 +57,24 @@ class QuestionShow extends React.Component{
                             <h1 className="question-show-item">{this.state.question.body}</h1>
                             <div className="temp-space"></div>
                             <div className="question-item-buttons">
-                                <button className="question-create-cancel-button" onClick={()=>this.handleCreateAnswer()}>📝 Answer</button>
+                                <button className="question-create-cancel-button" onClick={()=>this.showAnswerForm()}>📝 Answer</button>
                                 <button className="question-create-cancel-button">📶 Follow</button>
                                 <button className="question-create-cancel-button">👤 Request</button>
                             </div>
                         </div>
                     </div>
+                    {
+                        this.state.showForm ? <div>
+                            <textarea placeholder="Write your answer"></textarea>                                    
+                            <div>
+                                <div>
+                                    <button onClick={()=>this.handleCreateAnswer()}>Submit</button>
+                                    <button>Save Draft</button>
+                                </div>
+                                <button>...</button>
+                            </div>
+                        </div> : ""
+                    }
                     <div className="question-items-list-block">
                         <ul className="question-items-list">
                             {list}
