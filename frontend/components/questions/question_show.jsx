@@ -54,7 +54,6 @@ class QuestionShow extends React.Component{
     }
 
     handleCreateAnswer(){
-        // TODO: createAnswer, updateAnswer and deleteAnswer require a page refresh to show the new answer
         this.props.createAnswer(
             {
                 body: this.state.answerBody,
