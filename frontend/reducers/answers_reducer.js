@@ -10,7 +10,10 @@ const AnswersReducer = (state = {}, action) => {
     switch (action.type) {
 
         case RECEIVE_ANSWER:
-            newState[action.answer.id] = action.answer;
+            // action seems to be undefined when creating an answer
+            // Cannot read property 'id' of undefined at AnswersReducer (answers_reducer.js:14)
+
+            //newState[action.answer.id] = action.answer;
             return newState;
         case REMOVE_ANSWER:
             delete newState[action.answerId];

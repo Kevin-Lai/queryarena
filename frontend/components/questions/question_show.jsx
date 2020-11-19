@@ -9,6 +9,7 @@ class QuestionShow extends React.Component{
         this.state = {
             question: "",
             answerBody: "",
+            currentUserAnswerId: "",
             showForm: false
         }
     }
@@ -17,11 +18,14 @@ class QuestionShow extends React.Component{
         //debugger
         this.props.fetchQuestion(this.props.match.params.questionId).then(
             (action) => {
+                let userAnswer = action.question.answers.find( (answer) => answer.user_id === this.props.currentUserId )
+                //debugger
                 this.setState(
                     {
-                        question: action.question
+                        question: action.question,
+                        currentUserAnswerId: userAnswer ? userAnswer.id : ""
                     }
-                )
+                );
             }
         );
     }
@@ -39,6 +43,7 @@ class QuestionShow extends React.Component{
     }
 
     handleCreateAnswer(){
+        // Both createAnswer and deleteAnswer require a page refresh to show the new answer
         this.props.createAnswer(
             {
                 body: this.state.answerBody,
@@ -56,7 +61,11 @@ class QuestionShow extends React.Component{
     }
 
     handleDeleteAnswer(){
-
+        this.props.deleteAnswer(this.state.currentUserAnswerId).then(
+            (action) => {
+                this.setState({currentUserAnswerId: ""})
+            }
+        )
     }
 
     render(){
@@ -73,7 +82,7 @@ class QuestionShow extends React.Component{
                         {
                             answer.user_id === this.props.currentUserId ? <div>
                                 <button className="question-create-cancel-button">📝 Edit</button>
-                                <button className="question-create-cancel-button">❌ Delete</button>
+                                <button className="question-create-cancel-button" onClick={()=>this.handleDeleteAnswer()}>❌ Delete</button>
                             </div> : ""
                         }
                     </li>

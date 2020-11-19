@@ -9,7 +9,7 @@ class Api::AnswersController < ApplicationController
         @answer.user_id = current_user.id
 
         # Each user is only allowed to have 1 answer per question
-        if @answer.save
+        if @answer.save && @answer.user_id == current_user.id
             # render "/api/questions/show"
             #redirect_to api_question_url(@answer.question_id)
         else
@@ -20,7 +20,7 @@ class Api::AnswersController < ApplicationController
 
     def update
         @answer = Answer.includes(:question, :user).find_by(id: params[:id])
-        if @answer.update(answer_params)
+        if @answer.update(answer_params) && @answer.user_id == current_user.id
             # render "/api/questions/show"
             #redirect_to api_question_url(@answer.question_id)
         else
@@ -31,9 +31,10 @@ class Api::AnswersController < ApplicationController
     def destroy
         @answer = Answer.includes(:question, :user).find_by(id: params[:id])
 
-        question_show_id = @answer.question_id
+        #question_show_id = @answer.question_id
 
-        if @answer.destroy
+        if @answer.user_id == current_user.id
+            @answer.destroy
             # render "/api/questions/show"
             #redirect_to api_question_url(question_show_id)
         else
