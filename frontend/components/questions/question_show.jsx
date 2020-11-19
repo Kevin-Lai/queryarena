@@ -49,7 +49,7 @@ class QuestionShow extends React.Component{
     }
 
     handleCreateAnswer(){
-        // TODO: Both createAnswer and deleteAnswer require a page refresh to show the new answer
+        // TODO: createAnswer, updateAnswer and deleteAnswer require a page refresh to show the new answer
         this.props.createAnswer(
             {
                 body: this.state.answerBody,
@@ -63,11 +63,10 @@ class QuestionShow extends React.Component{
     }
 
     handleEditAnswer(){
-        // TODO: Test the update feature! (Currently, untested so might not be working.)
         this.props.updateAnswer(
             {
                 body: this.state.answerBody,
-                question_id: this.props.match.params.questionId
+                id: this.state.currentUserAnswerId
             }
         ).then(
             (action) => {
