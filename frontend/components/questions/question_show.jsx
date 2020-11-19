@@ -64,14 +64,16 @@ class QuestionShow extends React.Component{
                         </div>
                     </div>
                     {
-                        this.state.showForm ? <div>
-                            <textarea placeholder="Write your answer"></textarea>                                    
-                            <div>
-                                <div>
-                                    <button onClick={()=>this.handleCreateAnswer()}>Submit</button>
-                                    <button>Save Draft</button>
+                        this.state.showForm ? <div className="answer-form-block">
+                            <div className="answer-form">
+                                <textarea className="answer-form-textarea" placeholder="Write your answer"></textarea>                                    
+                                <div className="answer-form-buttons">
+                                    <div>
+                                        <button className="answer-create-button" onClick={()=>this.handleCreateAnswer()}>Submit</button>
+                                        <button>Save Draft</button>
+                                    </div>
+                                    <button>...</button>
                                 </div>
-                                <button>...</button>
                             </div>
                         </div> : ""
                     }
