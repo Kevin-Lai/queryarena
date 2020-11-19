@@ -17,6 +17,10 @@ class QuestionShow extends React.Component{
 
     componentDidMount(){
         //debugger
+        this.handleAnswers();
+    }
+
+    handleAnswers(){
         this.props.fetchQuestion(this.props.match.params.questionId).then(
             (action) => {
                 let userAnswer = action.question.answers.find( (answer) => answer.user_id === this.props.currentUserId )
@@ -58,6 +62,7 @@ class QuestionShow extends React.Component{
         ).then(
             (action) => {
                 this.setState({showForm: false});
+                this.handleAnswers();
             }
         )
     }
@@ -71,6 +76,7 @@ class QuestionShow extends React.Component{
         ).then(
             (action) => {
                 this.setState({showForm: false});
+                this.handleAnswers();
             }
         );
     }
@@ -78,7 +84,8 @@ class QuestionShow extends React.Component{
     handleDeleteAnswer(){
         this.props.deleteAnswer(this.state.currentUserAnswerId).then(
             (action) => {
-                this.setState({currentUserAnswerId: ""})
+                this.setState({currentUserAnswerId: ""});
+                this.handleAnswers();
             }
         )
     }
