@@ -8,7 +8,7 @@ class QuestionShow extends React.Component{
 
         this.state = {
             question: "",
-            answer: {},
+            answerBody: "",
             showForm: false
         }
     }
@@ -26,12 +26,37 @@ class QuestionShow extends React.Component{
         );
     }
 
+    handleChange(type){
+        return e => {
+            this.setState({
+                [type]: e.currentTarget.value
+            })
+        }
+    }
+
     showAnswerForm(){
         this.setState({showForm: true});
     }
 
     handleCreateAnswer(){
-        this.setState({showForm: false});
+        this.props.createAnswer(
+            {
+                body: this.state.answerBody,
+                question_id: this.props.match.params.questionId
+            }
+        ).then(
+            (action) => {
+                this.setState({showForm: false});
+            }
+        )
+    }
+
+    handleEditAnswer(){
+
+    }
+
+    handleDeleteAnswer(){
+
     }
 
     render(){
@@ -43,7 +68,15 @@ class QuestionShow extends React.Component{
 
         let list = this.state.question.answers.map( (answer, index) => {
                 return (
-                    <li className="answer-item" key={"answer #" + index}>{answer.body}</li>
+                    <li className="answer-item" key={"answer #" + index}>
+                        {answer.body}
+                        {
+                            answer.user_id === this.props.currentUserId ? <div>
+                                <button className="question-create-cancel-button">📝 Edit</button>
+                                <button className="question-create-cancel-button">❌ Delete</button>
+                            </div> : ""
+                        }
+                    </li>
                 )
             }
         );
@@ -66,7 +99,7 @@ class QuestionShow extends React.Component{
                     {
                         this.state.showForm ? <div className="answer-form-block">
                             <div className="answer-form">
-                                <textarea className="answer-form-textarea" placeholder="Write your answer"></textarea>                                    
+                                <textarea className="answer-form-textarea" placeholder="Write your answer" onChange={this.handleChange("answerBody")}></textarea>                                    
                                 <div className="answer-form-buttons">
                                     <div>
                                         <button className="answer-create-button" onClick={()=>this.handleCreateAnswer()}>Submit</button>
