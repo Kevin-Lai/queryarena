@@ -37,6 +37,10 @@ html, body {
     padding: 3px 7px 4px 7px;
 }
 
+.login-input-box input, .login-password-box input{
+    background-color: rgb(238, 238, 238);
+}
+
 .input-box{
     width: 93%;
 }
@@ -102,7 +106,6 @@ html, body {
 
 input[type=text], input[type=email], input[type=password] {
     min-height: 27px;
-    background: #fff;
     border: 1px solid #e2e2e2;
     border-radius: 3px;
 }
