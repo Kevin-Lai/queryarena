@@ -10,7 +10,8 @@ class QuestionShow extends React.Component{
             question: "",
             answerBody: "",
             currentUserAnswerId: "",
-            showForm: false
+            showForm: false,
+            formType: ""
         }
     }
 
@@ -38,12 +39,17 @@ class QuestionShow extends React.Component{
         }
     }
 
-    showAnswerForm(){
-        this.setState({showForm: true});
+    showAnswerForm(formType){
+        this.setState(
+            {
+                showForm: true,
+                formType: formType
+            }
+        );
     }
 
     handleCreateAnswer(){
-        // Both createAnswer and deleteAnswer require a page refresh to show the new answer
+        // TODO: Both createAnswer and deleteAnswer require a page refresh to show the new answer
         this.props.createAnswer(
             {
                 body: this.state.answerBody,
@@ -57,7 +63,17 @@ class QuestionShow extends React.Component{
     }
 
     handleEditAnswer(){
-
+        // TODO: Test the update feature! (Currently, untested so might not be working.)
+        this.props.updateAnswer(
+            {
+                body: this.state.answerBody,
+                question_id: this.props.match.params.questionId
+            }
+        ).then(
+            (action) => {
+                this.setState({showForm: false});
+            }
+        );
     }
 
     handleDeleteAnswer(){
@@ -66,6 +82,15 @@ class QuestionShow extends React.Component{
                 this.setState({currentUserAnswerId: ""})
             }
         )
+    }
+
+    handleSubmit(){
+        if(this.state.formType === "Create Answer"){
+            this.handleCreateAnswer();
+        }
+        else if(this.state.formType === "Update Answer"){
+            this.handleEditAnswer();
+        }
     }
 
     render(){
@@ -81,7 +106,7 @@ class QuestionShow extends React.Component{
                         {answer.body}
                         {
                             answer.user_id === this.props.currentUserId ? <div>
-                                <button className="question-create-cancel-button">📝 Edit</button>
+                                <button className="question-create-cancel-button" onClick={()=>this.showAnswerForm("Update Answer")}>📝 Edit</button>
                                 <button className="question-create-cancel-button" onClick={()=>this.handleDeleteAnswer()}>❌ Delete</button>
                             </div> : ""
                         }
@@ -99,7 +124,7 @@ class QuestionShow extends React.Component{
                             <h1 className="question-show-item">{this.state.question.body}</h1>
                             <div className="temp-space"></div>
                             <div className="question-item-buttons">
-                                <button className="question-create-cancel-button" onClick={()=>this.showAnswerForm()}>📝 Answer</button>
+                                <button className="question-create-cancel-button" onClick={()=>this.showAnswerForm("Create Answer")}>📝 Answer</button>
                                 <button className="question-create-cancel-button">📶 Follow</button>
                                 <button className="question-create-cancel-button">👤 Request</button>
                             </div>
@@ -108,10 +133,10 @@ class QuestionShow extends React.Component{
                     {
                         this.state.showForm ? <div className="answer-form-block">
                             <div className="answer-form">
-                                <textarea className="answer-form-textarea" placeholder="Write your answer" onChange={this.handleChange("answerBody")}></textarea>                                    
+                                <textarea className="answer-form-textarea" placeholder="Write your answer" value={this.state.answerBody} onChange={this.handleChange("answerBody")}></textarea>                                    
                                 <div className="answer-form-buttons">
                                     <div>
-                                        <button className="answer-create-button" onClick={()=>this.handleCreateAnswer()}>Submit</button>
+                                        <button className="answer-create-button" onClick={()=>this.handleSubmit()}>Submit</button>
                                         <button>Save Draft</button>
                                     </div>
                                     <button>...</button>
