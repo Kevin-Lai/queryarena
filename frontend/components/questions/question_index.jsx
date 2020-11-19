@@ -21,12 +21,6 @@ class QuestionIndex extends React.Component{
                     <div className="question-item-buttons">
                         <Link className="question-item-link" to={"/questions/"+question.id}>{question.answers ? question.answers.length : 0} Answers</Link>
                     </div>
-                    {/* <div className="temp-space"></div>
-                    <div className="question-item-buttons">
-                        <button className="question-create-cancel-button">📝 Answer</button>
-                        <button className="question-create-cancel-button">📶 Follow</button>
-                        <button className="question-create-cancel-button">✏️ Pass</button>
-                    </div> */}
                 </li>
             )
         });

@@ -60,7 +60,7 @@ class SearchIndex extends React.Component{
                     <Link className="question-item-link" to={"/questions/"+question.id}>{question.body}</Link>
                     <div className="temp-space"></div>
                     <div className="question-item-buttons">
-                        <button className="question-create-cancel-button">📶 Follow</button>
+                        <Link className="question-item-link" to={"/questions/"+question.id}>{question.answers ? question.answers.length : 0} Answers</Link>
                     </div>
                 </li>
             )
