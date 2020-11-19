@@ -28,7 +28,8 @@ class QuestionShow extends React.Component{
                 this.setState(
                     {
                         question: action.question,
-                        currentUserAnswerId: userAnswer ? userAnswer.id : ""
+                        currentUserAnswerId: userAnswer ? userAnswer.id : "",
+                        answerBody: userAnswer ? userAnswer.body : ""
                     }
                 );
             }
