@@ -2,6 +2,16 @@ html, body {
     font-family: -apple-system, sytem-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
+input[type=text], input[type=email], input[type=password] {
+    min-height: 27px;
+    border: 1px solid #e2e2e2;
+    border-radius: 3px;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
+    border-color: blue;
+}
+
 .first-name-label {
     margin-right: 55px;
 }
@@ -88,6 +98,7 @@ html, body {
 .forgot-password-link {
     color: #949494;
     font-size: 13px;
+    cursor: not-allowed;
 }
 
 .forgot-password-link:hover {
@@ -102,16 +113,6 @@ html, body {
     color: #333;
     height: 100%;
     margin-bottom: 10px;
-}
-
-input[type=text], input[type=email], input[type=password] {
-    min-height: 27px;
-    border: 1px solid #e2e2e2;
-    border-radius: 3px;
-}
-
-input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
-    border-color: blue;
 }
 
 .main-session-forms {

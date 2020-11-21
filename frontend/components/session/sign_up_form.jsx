@@ -63,7 +63,6 @@ class SignUpForm extends React.Component{
                         <button className="submit-button">{this.props.formType}</button>
                     </div>
                 </form>
-                {/* <Link to="/signin">Already have an account?</Link> */}
                 {/* <div>{this.props.errors}</div> */}
             </div>
         )
