@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SearchBar from '../search/search_bar';
+import UserProfileImage from "../../../app/assets/images/user_profile.png"
 
 class NavBar extends React.Component{
     constructor(props){
@@ -38,6 +39,9 @@ class NavBar extends React.Component{
                     <button className="nav-button">👪 Spaces</button>
                     <button className="nav-button">🔔 Notifications</button>
                     <SearchBar />
+                    <Link className="user-profile-img" to={"/users/"+this.props.currentUserId}>
+                        <img src={UserProfileImage} />
+                    </Link>
                     <div className="add-question-nav-button-block">
                         <button className="add-question-nav-button" onClick={() => this.props.openModal('Add Question')}>Add Question</button>
                     </div>
