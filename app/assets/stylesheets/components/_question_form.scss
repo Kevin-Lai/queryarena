@@ -111,11 +111,15 @@
     background-color: #185aff;
 }
 
-.question-create-cancel-button{
+.question-create-cancel-button, .question-create-cancel-button-unused{
     padding: 7px 15px;
 }
 
-.question-create-cancel-button:hover{
+.question-create-cancel-button:hover, .question-create-cancel-button-unused:hover{
     background-color: lightgrey;
     border-radius: 1000px;
+}
+
+.question-create-cancel-button-unused {
+    cursor: not-allowed;
 }

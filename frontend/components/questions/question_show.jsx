@@ -130,8 +130,8 @@ class QuestionShow extends React.Component{
                             <div className="temp-space"></div>
                             <div className="question-item-buttons">
                                 <button className="question-create-cancel-button" onClick={()=>this.showAnswerForm("Create Answer")}>📝 Answer</button>
-                                <button className="question-create-cancel-button">📶 Follow</button>
-                                <button className="question-create-cancel-button">👤 Request</button>
+                                <button className="question-create-cancel-button-unused">📶 Follow</button>
+                                <button className="question-create-cancel-button-unused">👤 Request</button>
                             </div>
                         </div>
                     </div>
