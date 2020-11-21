@@ -19,7 +19,7 @@ const App = ({ children }) => (
     <Modal/>
     <ProtectedRoute path="/" component={NavBarContainer} />
     <Switch>
-      <Route exact path="/users/:userId" component={UserShowContainer} />
+      <ProtectedRoute exact path="/users/:userId" component={UserShowContainer} />
       <ProtectedRoute exact path="/questions/:questionId" component={QuestionShowContainer} />
       
       <ProtectedRoute path="/search" component={SearchIndexContainer} />
