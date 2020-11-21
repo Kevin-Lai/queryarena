@@ -27,7 +27,6 @@ class QuestionIndex extends React.Component{
         //debugger
         return (
             <div className="question-index">
-                <NavBarContainer />
                 <div className="question-index-main-block">
                     <div className="create-question-index-block">
                         <button className="create-question-button" onClick={() => this.props.openModal('Add Question')}>What is your question or link?</button>

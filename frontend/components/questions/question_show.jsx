@@ -123,7 +123,6 @@ class QuestionShow extends React.Component{
 
         return (
             <div className="question-index">
-                <NavBarContainer />
                 <div>
                     <div className="question-show-item-block">
                         <div className="question-item">

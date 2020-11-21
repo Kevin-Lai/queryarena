@@ -10,13 +10,14 @@ import QuestionShowContainer from './questions/question_show_container';
 import Modal from "./modal/modal";
 
 import SearchIndexContainer from "./search/search_index_container";
+import NavBarContainer from './nav_bar/nav_bar_container';
 
 const App = ({ children }) => (
   <div>
     {/* <h2>Query Arena</h2> */}
 
     <Modal/>
-    
+    <ProtectedRoute path="/" component={NavBarContainer} />
     <Switch>
       <Route exact path="/users/:userId" component={UserShowContainer} />
       <ProtectedRoute exact path="/questions/:questionId" component={QuestionShowContainer} />

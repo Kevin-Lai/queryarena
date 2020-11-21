@@ -68,7 +68,6 @@ class SearchIndex extends React.Component{
 
         return (
             <div className="question-index">
-                <NavBarContainer />
                 <div className="question-index-main-block">
                     <div className="create-question-index-block">
                         <h2 className="question-search-title">Results for
