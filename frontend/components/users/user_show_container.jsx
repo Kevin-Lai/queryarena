@@ -17,8 +17,7 @@ const mstp = (state,ownProps) =>{
 
 const mdtp = (dispatch) => {
     return {
-        fetchUser: (userId) => dispatch(fetchUser(userId)),
-        signOut: () => dispatch(signOut())
+        fetchUser: (userId) => dispatch(fetchUser(userId))
     }
 }
 
