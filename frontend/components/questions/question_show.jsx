@@ -45,9 +45,14 @@ class QuestionShow extends React.Component{
     }
 
     showAnswerForm(formType){
+
+        if(formType === "Create Answer" && this.state.currentUserAnswerId){
+            formType = "Update Answer";
+        }
+
         this.setState(
             {
-                showForm: true,
+                showForm: !this.state.showForm,
                 formType: formType
             }
         );
