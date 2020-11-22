@@ -13,6 +13,14 @@ class QuestionShow extends React.Component{
             showForm: false,
             formType: ""
         }
+
+        this.handleAnswers = this.handleAnswers.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleCreateAnswer = this.handleCreateAnswer.bind(this);
+        this.handleDeleteAnswer = this.handleDeleteAnswer.bind(this);
+        this.handleEditAnswer = this.handleEditAnswer.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.showAnswerForm = this.showAnswerForm.bind(this);
     }
 
     componentDidMount(){
