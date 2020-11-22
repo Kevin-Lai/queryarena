@@ -142,9 +142,9 @@ class QuestionShow extends React.Component{
                                 <div className="answer-form-buttons">
                                     <div>
                                         <button className="answer-create-button" onClick={()=>this.handleSubmit()}>Submit</button>
-                                        <button>Save Draft</button>
+                                        <button className="answer-button-unused">Save Draft</button>
                                     </div>
-                                    <button>...</button>
+                                    <button className="answer-button-unused">...</button>
                                 </div>
                             </div>
                         </div> : ""
