@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import UserProfileImage from "../../../app/assets/images/user_profile.png"
 
 class UserShow extends React.Component{
     constructor(props){
@@ -51,8 +52,9 @@ class UserShow extends React.Component{
         return (
             <div className="question-index">
                 <div className="question-index-main-block">
-                    <div className="create-question-index-block">
-                        <h1>{"Welcome " + this.props.user.first_name + " " + this.props.user.last_name + "!"}</h1>
+                    <div className="user-info-block">
+                        <img className="user-show-profile-img" src={UserProfileImage} />
+                        <h1>{this.props.user.first_name + " " + this.props.user.last_name}</h1>
                     </div>
                     <div className="question-items-list-block">
                         <ul className="question-items-list">
