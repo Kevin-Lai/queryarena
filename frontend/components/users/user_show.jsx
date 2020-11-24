@@ -33,6 +33,7 @@ class UserShow extends React.Component{
 
         //debugger
 
+        // In case the user has not created any questions
         let list = this.state.userQuestions ? this.state.userQuestions.map((question, index)=>{
         // let list = this.props.user.questions.map((question, index)=>{
             //debugger

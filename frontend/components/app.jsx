@@ -14,23 +14,15 @@ import NavBarContainer from './nav_bar/nav_bar_container';
 
 const App = ({ children }) => (
   <div>
-    {/* <h2>Query Arena</h2> */}
-
     <Modal/>
     <ProtectedRoute path="/" component={NavBarContainer} />
     <Switch>
       <ProtectedRoute exact path="/users/:userId" component={UserShowContainer} />
       <ProtectedRoute exact path="/questions/:questionId" component={QuestionShowContainer} />
-      
       <ProtectedRoute path="/search" component={SearchIndexContainer} />
-      
       <AuthRoute path="/signup" component={SessionFormContainer} />
       <AuthRoute path="/signin" component={SessionFormContainer} />
-      
-      {/* <ProtectedRoute exact path="/" component={ QuestionIndexContainer } />
-      <AuthRoute exact path="/" component={ SessionFormContainer } /> */}
       <EntryRoute exact path="/"/>
-
       <Redirect from="/*" to="/"/>
     </Switch>
   </div>

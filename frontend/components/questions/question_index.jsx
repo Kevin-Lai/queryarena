@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavBarContainer from '../nav_bar/nav_bar_container';
 
 class QuestionIndex extends React.Component{
     constructor(props){
@@ -38,7 +37,6 @@ class QuestionIndex extends React.Component{
                     </div>
                 </div>
             </div>
-
         )
     }
 }
