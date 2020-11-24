@@ -49,6 +49,8 @@ class UserShow extends React.Component{
             )
         }) : "";
 
+        let numberOfQuestions = this.state.userQuestions ? this.state.userQuestions.length : 0;
+
         return (
             <div>
                 <div className="user-info-block">
@@ -56,7 +58,9 @@ class UserShow extends React.Component{
                     <h1 className="user-profile-name">{this.props.user.first_name + " " + this.props.user.last_name}</h1>
                 </div>
                 <div className="user-info-block">
-                    <label className="user-questions-number">{this.state.userQuestions ? this.state.userQuestions.length : 0} Questions</label>
+                    <div className="user-questions-number-block">
+                        <label className="user-questions-number">{numberOfQuestions > 1 ? numberOfQuestions+" Questions" : numberOfQuestions+" Question"}</label>
+                    </div>
                 </div>
                 <div className="question-items-list-block">
                     <ul className="user-questions-list">

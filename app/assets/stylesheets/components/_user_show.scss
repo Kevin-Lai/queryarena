@@ -32,5 +32,13 @@
 }
 
 .user-questions-number {
-    border: 1px solid red;
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 15px;
+}
+
+.user-questions-number-block {
+    width: 530px;
+    border-top: 1px solid black;
+    padding-top: 10px;
 }
