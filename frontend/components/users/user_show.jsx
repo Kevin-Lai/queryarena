@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom';
 class UserShow extends React.Component{
     constructor(props){
         super(props);
+
+        this.state = {
+            userQuestions: ""
+        }
+
     }
 
     componentDidMount(){
@@ -11,6 +16,13 @@ class UserShow extends React.Component{
 
         // prior to fetching the user, the user did not exist in the state.entities.user slice of state.
         this.props.fetchUser(this.props.currentUserId);
+        this.props.fetchQuestions().then(
+            (action) => {
+                //debugger
+                let userQuestions = action.questions.filter(question => question.user_id === this.props.currentUserId);
+                this.setState({userQuestions: userQuestions});
+            }
+        );
     }
 
     render(){
@@ -19,7 +31,10 @@ class UserShow extends React.Component{
             return null;
         }
 
-        let list = this.props.user.questions.map((question, index)=>{
+        //debugger
+
+        let list = this.state.userQuestions ? this.state.userQuestions.map((question, index)=>{
+        // let list = this.props.user.questions.map((question, index)=>{
             //debugger
             return(
                 <li className="question-item" key={"question #" + index}>
@@ -30,7 +45,7 @@ class UserShow extends React.Component{
                     </div>
                 </li>
             )
-        });
+        }) : "";
 
         return (
             <div className="question-index">

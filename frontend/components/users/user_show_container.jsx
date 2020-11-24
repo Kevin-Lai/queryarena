@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { fetchUser } from '../../actions/user_actions';
 import { signOut } from '../../actions/session_actions';
+import { fetchQuestions } from '../../actions/question_actions';
 
 import UserShow from './user_show';
 
@@ -17,7 +18,8 @@ const mstp = (state,ownProps) =>{
 
 const mdtp = (dispatch) => {
     return {
-        fetchUser: (userId) => dispatch(fetchUser(userId))
+        fetchUser: (userId) => dispatch(fetchUser(userId)),
+        fetchQuestions: () => dispatch(fetchQuestions())
     }
 }
 
