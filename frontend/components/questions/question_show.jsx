@@ -121,6 +121,7 @@ class QuestionShow extends React.Component{
                 return (
                     <li className="answer-item" key={"answer #" + index}>
                         {answer.body}
+                        <div className="temp-space"></div>
                         {
                             answer.user_id === this.props.currentUserId ? <div>
                                 <button className="question-create-cancel-button" onClick={()=>this.showAnswerForm("Update Answer")}>📝 Edit</button>
