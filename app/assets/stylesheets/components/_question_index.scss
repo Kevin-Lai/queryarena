@@ -5,12 +5,12 @@
 
 .question-index {
     background-color: lightgray;
-    height: 100vh;
+    height: 94vh;
 
     // This will handle the list overflow
     // where the background color was cut off
     // for list items that went over the body's height
-    overflow: scroll;
+    overflow: auto;
 }
 
 .question-items-list{
