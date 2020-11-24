@@ -62,7 +62,7 @@ class UserShow extends React.Component{
                         <label className="user-questions-number">{numberOfQuestions > 1 ? numberOfQuestions+" Questions" : numberOfQuestions+" Question"}</label>
                     </div>
                 </div>
-                <div className="question-items-list-block">
+                <div className="user-questions-block">
                     <ul className="user-questions-list">
                         {list}
                     </ul>

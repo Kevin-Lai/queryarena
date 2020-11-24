@@ -3,7 +3,7 @@
     height: 120px;
 }
 
-.user-info-block {
+.user-info-block, .user-questions-block {
     display: flex;
     justify-content: center;
 }
@@ -12,11 +12,13 @@
     font-size: 24px;
     font-weight: bold;
     display: flex;
-    align-items: center
+    align-items: center;
 }
 
 .user-questions-list{
+    display: inline-block;
     overflow: auto;
+    height: 600px;
 }
 
 .user-questions-item {
@@ -27,6 +29,7 @@
     padding-top: 20px;
     padding-bottom: 10px;
     margin-top: 8px;
+    margin-right: 10px;
     border-bottom: 1px solid black;
 }
 
@@ -37,9 +40,11 @@
 }
 
 .user-questions-number-block {
-    width: 530px;
+    width: 536px;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     padding-top: 10px;
     padding-bottom: 10px;
+    margin-right: 20px;
+    margin-bottom: 5px;
 }
