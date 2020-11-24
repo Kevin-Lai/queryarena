@@ -156,7 +156,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
 }
 
 .session-form-background {
-    background-image: url("home_background.png");
+    background-image: image-url("home_background.png");
     height: 100vh;
     display: flex;
     justify-content: center;
