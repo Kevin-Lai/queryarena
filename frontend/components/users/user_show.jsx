@@ -39,7 +39,7 @@ class UserShow extends React.Component{
         // let list = this.props.user.questions.map((question, index)=>{
             //debugger
             return(
-                <li className="question-item" key={"question #" + index}>
+                <li className="user-questions-item" key={"question #" + index}>
                     <Link className="question-item-link" to={"/questions/"+question.id}>{question.body}</Link>
                     <div className="temp-space"></div>
                     <div className="question-item-buttons">
@@ -50,17 +50,18 @@ class UserShow extends React.Component{
         }) : "";
 
         return (
-            <div className="question-index">
-                <div className="question-index-main-block">
-                    <div className="user-info-block">
-                        <img className="user-show-profile-img" src={UserProfileImage} />
-                        <h1>{this.props.user.first_name + " " + this.props.user.last_name}</h1>
-                    </div>
-                    <div className="question-items-list-block">
-                        <ul className="question-items-list">
-                            {list}
-                        </ul>
-                    </div>
+            <div>
+                <div className="user-info-block">
+                    <img className="user-show-profile-img" src={UserProfileImage} />
+                    <h1 className="user-profile-name">{this.props.user.first_name + " " + this.props.user.last_name}</h1>
+                </div>
+                <div className="user-info-block">
+                    <label className="user-questions-number">{this.state.userQuestions ? this.state.userQuestions.length : 0} Questions</label>
+                </div>
+                <div className="question-items-list-block">
+                    <ul className="user-questions-list">
+                        {list}
+                    </ul>
                 </div>
             </div>
         )

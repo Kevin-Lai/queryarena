@@ -7,3 +7,30 @@
     display: flex;
     justify-content: center;
 }
+
+.user-profile-name {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center
+}
+
+.user-questions-list{
+    overflow: auto;
+}
+
+.user-questions-item {
+    background-color: white;
+    width: 500px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-top: 8px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.user-questions-number {
+    border: 1px solid red;
+}
