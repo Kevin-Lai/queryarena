@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class UserShow extends React.Component{
     constructor(props){
@@ -18,9 +19,31 @@ class UserShow extends React.Component{
             return null;
         }
 
+        let list = this.props.user.questions.map((question, index)=>{
+            //debugger
+            return(
+                <li className="question-item" key={"question #" + index}>
+                    <Link className="question-item-link" to={"/questions/"+question.id}>{question.body}</Link>
+                    <div className="temp-space"></div>
+                    <div className="question-item-buttons">
+                        <Link className="question-item-link" to={"/questions/"+question.id}>{question.answers ? question.answers.length : 0} Answers</Link>
+                    </div>
+                </li>
+            )
+        });
+
         return (
             <div className="question-index">
-                <h1>{"Welcome " + this.props.user.first_name + " " + this.props.user.last_name + "!"}</h1>
+                <div className="question-index-main-block">
+                    <div className="create-question-index-block">
+                        <h1>{"Welcome " + this.props.user.first_name + " " + this.props.user.last_name + "!"}</h1>
+                    </div>
+                    <div className="question-items-list-block">
+                        <ul className="question-items-list">
+                            {list}
+                        </ul>
+                    </div>
+                </div>
             </div>
         )
     }
