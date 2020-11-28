@@ -54,10 +54,12 @@ QueryArena is a web application that allows users to ask questions and share ans
 ---
 ### Answers
 * On each question's show page, users can view all of the answers posted for that question.
-* Users to create, edit, and delete their own answers to questions.
+* Users can create, edit, and delete their own answers to questions.
 ---
 ### User Profile Page
 * Users can access their profile page to see all questions that they have posted to the site.
+* Users can see the total number of questions that they have posted on the site.
+* Users can see their full name displayed on their profile page.
 ---
 ### Future Planned Features
 * Display the author's name on answers.
