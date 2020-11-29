@@ -38,12 +38,15 @@ class UserShow extends React.Component{
         let list = this.state.userQuestions ? this.state.userQuestions.map((question, index)=>{
         // let list = this.props.user.questions.map((question, index)=>{
             //debugger
+
+            let numberOfAnswers = question.answers ? question.answers.length : 0;
+
             return(
                 <li className="user-questions-item" key={"question #" + index}>
                     <Link className="question-item-link" to={"/questions/"+question.id}>{question.body}</Link>
                     <div className="temp-space"></div>
                     <div className="question-item-buttons">
-                        <Link className="question-item-link" to={"/questions/"+question.id}>{question.answers ? question.answers.length : 0} Answers</Link>
+                        <Link className="question-item-link" to={"/questions/"+question.id}>{numberOfAnswers === 1 ? numberOfQuestions+" Answer": numberOfQuestions+" Answers"}</Link>
                     </div>
                 </li>
             )
@@ -59,7 +62,7 @@ class UserShow extends React.Component{
                 </div>
                 <div className="user-info-block">
                     <div className="user-questions-number-block">
-                        <label className="user-questions-number">{numberOfQuestions > 1 ? numberOfQuestions+" Questions" : numberOfQuestions+" Question"}</label>
+                        <label className="user-questions-number">{numberOfQuestions === 1 ? numberOfQuestions+" Question" : numberOfQuestions+" Questions"}</label>
                     </div>
                 </div>
                 <div className="user-questions-block">
