@@ -29,7 +29,8 @@
 }
 
 .question-item, .answer-item{
-    height: 100px;
+    min-height: 100px;
+    height: fit-content;
     padding-top: 20px;
     padding-bottom: 10px;
 }
