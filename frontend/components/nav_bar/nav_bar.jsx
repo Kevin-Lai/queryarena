@@ -13,8 +13,6 @@ class NavBar extends React.Component{
     }
 
     componentDidMount(){
-        //debugger
-
         // prior to fetching the user, the user did not exist in the state.entities.user slice of state.
         this.props.fetchUser(this.props.currentUserId);
     }
@@ -50,7 +48,6 @@ class NavBar extends React.Component{
                             </a>
                         </div>
                     </button>
-
                     <SearchBar />
                     <Link className="user-profile-img" to={"/users/"+this.props.currentUserId}>
                         <img src={UserProfileImage} />
