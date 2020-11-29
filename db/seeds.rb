@@ -6,8 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# TODO: Seed Questions and Answers for Guest User
-
 User.delete_all
 Question.destroy_all
 Answer.destroy_all
@@ -17,6 +15,13 @@ guest = User.create!(
     password: 'password',
     first_name: "Guest",
     last_name: "User"
+)
+
+creator = User.create!(
+    email: 'kevinlai@queryarena.com',
+    password: 'createdby:kevin-lai',
+    first_name: "Kevin",
+    last_name: "Lai"
 )
 
 u1 = User.create!(
@@ -102,7 +107,36 @@ q8 = Question.create(user_id: u7.id, body: "How many weeks are in a month?")
 q9 = Question.create(user_id: u8.id, body: "How many weeks are in a year?")
 q10 = Question.create(user_id: u9.id, body: "How many months are in a year?")
 q11 = Question.create(user_id: u10.id, body: "How many milliseconds are in a second?")
-
+q12 = Question.create(user_id: creator.id, body: "What color is grass?")
+q13 = Question.create(user_id: creator.id, body: "What color is the sky?")
+q14 = Question.create(user_id: creator.id, body: "Why is the sky blue?")
+q15 = Question.create(user_id: creator.id, body: "How much does the earth weigh?")
+q16 = Question.create(user_id: creator.id, body: "How far away is the sun?")
+q17 = Question.create(user_id: creator.id, body: "What is a black hole?")
+q18 = Question.create(user_id: creator.id, body: "How do airplanes fly?")
+q19 = Question.create(user_id: creator.id, body: "How are rainbows made?")
+q20 = Question.create(user_id: creator.id, body: "Are whales fish?")
+q21 = Question.create(user_id: creator.id, body: "Is the earth flat?")
+q22 = Question.create(user_id: creator.id, body: "Why do birds fly south for the winter?")
+q23 = Question.create(user_id: creator.id, body: "What are the two holes of the nose called?")
+q24 = Question.create(user_id: creator.id, body: "What organ covers the entire body and protects it?")
+q25 = Question.create(user_id: creator.id, body: "Who invented the first functional telephone?")
+q26 = Question.create(user_id: creator.id, body: "What part of the plant conducts photosynthesis?")
+q27 = Question.create(user_id: creator.id, body: "What is the boiling point of water?")
+q28 = Question.create(user_id: creator.id, body: "Which is the largest land animal?")
+q29 = Question.create(user_id: creator.id, body: "What are the three states of matter?")
+q30 = Question.create(user_id: creator.id, body: "Which pigment gives the leaves its green color?")
+q31 = Question.create(user_id: creator.id, body: "What is color blindness?")
+q32 = Question.create(user_id: creator.id, body: "What is NASA?")
+q33 = Question.create(user_id: creator.id, body: "What is a pitcher plant?")
+q34 = Question.create(user_id: creator.id, body: "What is a venus flytrap?")
+q35 = Question.create(user_id: creator.id, body: "What is GitHub?")
+q36 = Question.create(user_id: creator.id, body: "What is LinkedIn?")
+q37 = Question.create(user_id: creator.id, body: "What is YouTube?")
+q38 = Question.create(user_id: creator.id, body: "What is FireFox?")
+q39 = Question.create(user_id: creator.id, body: "What is Twitch?")
+q40 = Question.create(user_id: creator.id, body: "What is Amazon?")
+q41 = Question.create(user_id: creator.id, body: "What is Netflix?")
 
 Answer.create(user_id: u10.id, question_id: q1.id, body: "QueryArena, a Quora clone, is a web application that allows users to ask questions and share answers.")
 Answer.create(user_id: u1.id, question_id: q2.id, body: "There are 60 seconds in a minute.")
@@ -115,3 +149,6 @@ Answer.create(user_id: u7.id, question_id: q8.id, body: "There are 4 weeks in a 
 Answer.create(user_id: u8.id, question_id: q9.id, body: "There are 52 weeks in a year.")
 Answer.create(user_id: u9.id, question_id: q10.id, body: "There are 12 months in a year.")
 Answer.create(user_id: guest.id, question_id: q11.id, body: "There are 1000 milliseconds in one second.")
+Answer.create(user_id: creator.id, question_id: q32.id, body: "The National Aeronautics and Space Administration, also known as NASA, is an independent agency of the U.S. federal government responsible for the civilian space program, as well as aeronautics and space research.")
+Answer.create(user_id: creator.id, question_id: q34.id, body: "The Venus flytrap (Dionaea muscipula) is a carnivorous plant native to subtropical wetlands on the East Coast of the United States in North Carolina and South Carolina.")
+
