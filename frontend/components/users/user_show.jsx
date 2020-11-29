@@ -46,7 +46,7 @@ class UserShow extends React.Component{
                     <Link className="question-item-link" to={"/questions/"+question.id}>{question.body}</Link>
                     <div className="temp-space"></div>
                     <div className="question-item-buttons">
-                        <Link className="question-item-link" to={"/questions/"+question.id}>{numberOfAnswers === 1 ? numberOfQuestions+" Answer": numberOfQuestions+" Answers"}</Link>
+                        <Link className="question-item-link" to={"/questions/"+question.id}>{numberOfAnswers === 1 ? numberOfAnswers+" Answer": numberOfAnswers+" Answers"}</Link>
                     </div>
                 </li>
             )
