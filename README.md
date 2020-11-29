@@ -53,10 +53,12 @@ QueryArena is a web application that allows users to ask questions and share ans
 * The search results page displays all of the questions that matched their query, regardless of whether there are any upper case or lower case letters within the query.
 ---
 ### Answers
+![Answer CRUD](https://github.com/Kevin-Lai/queryarena/blob/master/images/answers_crud.gif)
 * On each question's show page, users can view all of the answers posted for that question.
 * Users can create, edit, and delete their own answers to questions.
 ---
 ### User Profile Page
+![User Profile](https://github.com/Kevin-Lai/queryarena/blob/master/images/user_profile.gif)
 * Users can access their profile page to see all questions that they have posted to the site.
 * Users can see the total number of questions that they have posted on the site.
 * Users can see their full name displayed on their profile page.
@@ -64,4 +66,5 @@ QueryArena is a web application that allows users to ask questions and share ans
 ### Future Planned Features
 * Display the author's name on answers.
 * Improve search functionality to include answers and users' names.
+* Allow users to follow questions.
 * Allow users to create comments on answers.
