@@ -13,12 +13,15 @@ class QuestionIndex extends React.Component{
     render(){
         let list = this.props.questions.map((question, index)=>{
             //debugger
+
+            let numberOfAnswers = question.answers ? question.answers.length : 0;
+
             return(
                 <li className="question-item" key={"question #" + index}>
                     <Link className="question-item-link" to={"/questions/"+question.id}>{question.body}</Link>
                     <div className="temp-space"></div>
                     <div className="question-item-buttons">
-                        <Link className="question-item-link" to={"/questions/"+question.id}>{question.answers ? question.answers.length : 0} Answers</Link>
+                        <Link className="question-item-link" to={"/questions/"+question.id}>{numberOfAnswers === 1 ? numberOfAnswers+" Answer": numberOfAnswers+" Answers"}</Link>
                     </div>
                 </li>
             )
