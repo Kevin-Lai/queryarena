@@ -80,12 +80,16 @@
 
 .about-dropdown .about-dropdown-link {
     color: black;
-    padding: 10px 14px;
+    padding: 10px;
     text-decoration: none;
     display: block;
 }
 
 .about-dropdown .about-dropdown-link:hover {
-    color: red;
     background-color: lightgray;
+}
+
+.about-dropdown-link {
+    width: 50px;
+    height: 50px;
 }

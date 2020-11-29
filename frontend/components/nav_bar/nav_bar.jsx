@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SearchBar from '../search/search_bar';
 import UserProfileImage from "../../../app/assets/images/user_profile.png"
+import GitHubIcon from "../../../app/assets/images/github.png"
+import LinkedInIcon from "../../../app/assets/images/linkedin.png"
 
 class NavBar extends React.Component{
     constructor(props){
@@ -40,8 +42,12 @@ class NavBar extends React.Component{
                     <button className="nav-button-unused">🔔 Notifications</button>
                     <button className="about">ℹ️ About
                         <div className="about-dropdown">
-                            <Link className="about-dropdown-link" to="/">Test 1</Link>
-                            <Link className="about-dropdown-link" to="/">Test 2</Link>
+                            <a href="https://www.linkedin.com/in/kevinlai247" className="about-dropdown-link" target="_blank">
+                                <img src={LinkedInIcon}/>
+                            </a>
+                            <a href="https://github.com/Kevin-Lai" className="about-dropdown-link" target="_blank">
+                                <img src={GitHubIcon}/>
+                            </a>
                         </div>
                     </button>
 
