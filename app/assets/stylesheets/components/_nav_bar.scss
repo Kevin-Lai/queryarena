@@ -1,4 +1,4 @@
-.nav-button, .nav-button-unused{
+.nav-button, .nav-button-unused, .about{
     padding: 10px;
     color: #636466;
     font-weight: bold;
@@ -27,7 +27,7 @@
 
 }
 
-.nav-button:hover, .home-nav-button:hover, .nav-button-unused:hover{
+.nav-button:hover, .home-nav-button:hover, .nav-button-unused:hover, .about:hover{
     color: red;
     border-bottom: 2px solid red;
     background-color: rgb(248, 248, 248);
@@ -63,4 +63,29 @@
 .user-profile-img {
     width: 50px;
     height: 50px;
+}
+
+.about:hover .about-dropdown{
+    display: block;
+}
+
+.about-dropdown {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-top: 17px;
+    background-color: white;
+}
+
+.about-dropdown .about-dropdown-link {
+    color: black;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+}
+
+.about-dropdown .about-dropdown-link:hover {
+    color: red;
+    background-color: lightgray;
 }

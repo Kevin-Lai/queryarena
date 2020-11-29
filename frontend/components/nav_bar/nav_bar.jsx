@@ -38,6 +38,13 @@ class NavBar extends React.Component{
                     <button className="nav-button-unused">📝 Answer</button>
                     <button className="nav-button-unused">👪 Spaces</button>
                     <button className="nav-button-unused">🔔 Notifications</button>
+                    <button className="about">ℹ️ About
+                        <div className="about-dropdown">
+                            <Link className="about-dropdown-link" to="/">Test 1</Link>
+                            <Link className="about-dropdown-link" to="/">Test 2</Link>
+                        </div>
+                    </button>
+
                     <SearchBar />
                     <Link className="user-profile-img" to={"/users/"+this.props.currentUserId}>
                         <img src={UserProfileImage} />
