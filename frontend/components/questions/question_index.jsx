@@ -12,7 +12,6 @@ class QuestionIndex extends React.Component{
 
     render(){
         let list = this.props.questions.map((question, index)=>{
-            //debugger
 
             let numberOfAnswers = question.answers ? question.answers.length : 0;
 
@@ -26,7 +25,7 @@ class QuestionIndex extends React.Component{
                 </li>
             )
         });
-        //debugger
+
         return (
             <div className="question-index">
                 <div className="question-index-main-block">
