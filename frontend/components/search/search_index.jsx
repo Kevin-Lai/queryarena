@@ -14,14 +14,10 @@ class SearchIndex extends React.Component{
     }
 
     componentDidMount(){
-
         let query = this.props.location.search.split("=")[1];
-
-        //debugger
 
         this.props.searchQuery(query.toLowerCase()).then(
             (action) => {
-            //debugger
                 this.setState({
                     results: action.results
                 })
@@ -30,16 +26,12 @@ class SearchIndex extends React.Component{
     }
 
     componentDidUpdate(prevProps){
-        //debugger
-
         let query = this.props.location.search.split("=")[1];
         let prevQuery = prevProps.location.search.split("=")[1];
 
         if (query !== prevQuery){
-            //debugger
             this.props.searchQuery(query.toLowerCase()).then(
                 (action) => {
-                //debugger
                     this.setState({
                         results: action.results
                     })
@@ -49,10 +41,7 @@ class SearchIndex extends React.Component{
     }
 
     render() {
-        //debugger
-
         let list = this.state.results.map((question, index)=>{
-            //debugger
             return(
                 <li className="question-item" key={"question #" + index}>
                     <Link className="question-item-link" to={"/questions/"+question.id}>{question.body}</Link>
@@ -81,7 +70,6 @@ class SearchIndex extends React.Component{
             </div>
         )
     }
-
 }
 
 export default SearchIndex;

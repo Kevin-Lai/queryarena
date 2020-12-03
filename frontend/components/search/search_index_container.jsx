@@ -12,5 +12,4 @@ const mdtp = (dispatch) => {
     }
 }
 
-
 export default withRouter(connect(null, mdtp)(SearchIndex));
