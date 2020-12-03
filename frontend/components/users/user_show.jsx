@@ -9,12 +9,9 @@ class UserShow extends React.Component{
         this.state = {
             userQuestions: ""
         }
-
     }
 
     componentDidMount(){
-        //debugger
-
         // prior to fetching the user, the user did not exist in the state.entities.user slice of state.
         this.props.fetchUser(this.props.currentUserId);
         this.props.fetchQuestions().then(
@@ -32,12 +29,8 @@ class UserShow extends React.Component{
             return null;
         }
 
-        //debugger
-
         // In case the user has not created any questions
         let list = this.state.userQuestions ? this.state.userQuestions.map((question, index)=>{
-        // let list = this.props.user.questions.map((question, index)=>{
-            //debugger
 
             let numberOfAnswers = question.answers ? question.answers.length : 0;
 
@@ -74,4 +67,5 @@ class UserShow extends React.Component{
         )
     }
 }
+
 export default UserShow;
