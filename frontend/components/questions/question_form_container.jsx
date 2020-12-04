@@ -8,8 +8,6 @@ import { withRouter } from 'react-router-dom'
 import QuestionForm from "./question_form"
 
 const mstp = (state,ownProps) =>{
-    //debugger
-
     return {
         question: {
             body: ""
@@ -23,6 +21,5 @@ const mdtp = (dispatch) => {
         closeModal: () => dispatch(closeModal())
     }
 }
-
 
 export default withRouter(connect(mstp, mdtp)(QuestionForm));

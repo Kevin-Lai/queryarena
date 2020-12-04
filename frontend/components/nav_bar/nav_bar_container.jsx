@@ -10,8 +10,6 @@ import { withRouter } from 'react-router-dom'
 import NavBar from './nav_bar';
 
 const mstp = (state,ownProps) =>{
-    //debugger
-
     // you must pass in currentUserId first, so that after the user is fetched,
     // then the user will be in the state.entities.users
     return {
@@ -27,6 +25,5 @@ const mdtp = (dispatch) => {
         openModal: modal => dispatch(openModal(modal))
     }
 }
-
 
 export default withRouter(connect(mstp, mdtp)(NavBar));

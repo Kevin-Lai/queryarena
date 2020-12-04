@@ -13,8 +13,6 @@ class SessionForm extends React.Component{
     }
 
     render(){
-        //debugger
-
         let errorsArray = this.props.errors.map( (el) => {
             return(
                 <li>{el}</li>

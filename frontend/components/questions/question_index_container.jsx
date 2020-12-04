@@ -4,7 +4,6 @@ import { fetchQuestions } from '../../actions/question_actions';
 import QuestionIndex from './question_index';
 
 const mstp = (state) =>{
-    //debugger
     return {
         questions: Object.values(state.entities.questions)
     }
@@ -16,6 +15,5 @@ const mdtp = (dispatch) => {
         openModal: modal => dispatch(openModal(modal))
     }
 }
-
 
 export default connect(mstp, mdtp)(QuestionIndex);
