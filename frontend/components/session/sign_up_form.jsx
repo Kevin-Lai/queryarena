@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 
 class SignUpForm extends React.Component{
     constructor(props){
@@ -22,19 +21,13 @@ class SignUpForm extends React.Component{
 
     handleSubmit(e){
         e.preventDefault();
-        //debugger
-        // if signUp() or signIn() is successful, then it will redirect to the user's show page.
         this.props.submitEvent(this.state).then( (action) => {
-                //debugger
-                // return this.props.history.push("/users/" + action.currentUser.id)
                 return this.props.history.push("/")
             }
         );
     }
 
-
     handleChange(fieldType){
-        //debugger
         return event => {
             this.setState({
                 [fieldType]: event.currentTarget.value
@@ -43,7 +36,6 @@ class SignUpForm extends React.Component{
     }
 
     render(){
-        //debugger
         return (
             <div className="session-form">
                 <form onSubmit={this.handleSubmit}>
@@ -63,7 +55,6 @@ class SignUpForm extends React.Component{
                         <button className="submit-button">{this.props.formType}</button>
                     </div>
                 </form>
-                {/* <div>{this.props.errors}</div> */}
             </div>
         )
     }
