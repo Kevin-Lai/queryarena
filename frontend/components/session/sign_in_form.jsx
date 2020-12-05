@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 
 class SignInForm extends React.Component{
     constructor(props){
@@ -23,19 +22,13 @@ class SignInForm extends React.Component{
 
     handleSubmit(e){
         e.preventDefault();
-        //debugger
-        // if signUp() or signIn() is successful, then it will redirect to the user's show page.
         this.props.submitEvent(this.state).then( (action) => {
-                //debugger
-                // return this.props.history.push("/users/" + action.currentUser.id)
                 return this.props.history.push("/")
             }
         );
     }
 
-
     handleChange(fieldType){
-        //debugger
         return event => {
             this.setState({
                 [fieldType]: event.currentTarget.value
@@ -44,9 +37,6 @@ class SignInForm extends React.Component{
     }
 
     handleDemo(e){
-        
-        //debugger
-
         this.state = {
             email: 'guest@queryarena.com',
             password: 'password',
@@ -60,7 +50,6 @@ class SignInForm extends React.Component{
     }
 
     render(){
-        //debugger
         return (
             <div className="session-form">
                 <form onSubmit={this.handleSubmit}>
@@ -77,9 +66,7 @@ class SignInForm extends React.Component{
                     </div>
                 </form>
                 <button className="demo-login-button" onClick={(e)=>this.handleDemo(e)}>Demo Login</button>
-                {/* <div>{this.props.errors}</div> */}
             </div>
-
         )
     }
 }
