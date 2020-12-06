@@ -22,7 +22,6 @@ class QuestionShow extends React.Component{
     }
 
     componentDidMount(){
-        //debugger
         this.handleAnswers();
     }
 
@@ -30,7 +29,7 @@ class QuestionShow extends React.Component{
         this.props.fetchQuestion(this.props.match.params.questionId).then(
             (action) => {
                 let userAnswer = action.question.answers.find( (answer) => answer.user_id === this.props.currentUserId )
-                //debugger
+
                 this.setState(
                     {
                         question: action.question,
@@ -115,8 +114,6 @@ class QuestionShow extends React.Component{
             return null;
         }
 
-        //debugger
-
         let list = this.state.question.answers.map( (answer, index) => {
                 return (
                     <li className="answer-item" key={"answer #" + index}>
@@ -171,4 +168,5 @@ class QuestionShow extends React.Component{
         )
     }
 }
+
 export default QuestionShow;
