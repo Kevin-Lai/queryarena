@@ -5,15 +5,12 @@ import SessionFormContainer from '../components/session/session_form_container';
 import QuestionIndexContainer from "../components/questions/question_index_container"
 
 const mstp = (state) => {
-    //debugger
     return {
         signedIn: Boolean(state.session.currentUserId)
     }
 }
 
 const Auth = ({ signedIn, path, component: Component }) => {
-    //debugger
-
     // The user must NOT be signed in to access this route.
     // If the user is signed in, then this route will no longer be accessable.
     return (
@@ -27,7 +24,6 @@ const Auth = ({ signedIn, path, component: Component }) => {
 }
 
 const Protected = ({ signedIn, path, component: Component }) => {
-
     // The user must be signed in to access this route.
     // If the user is NOT signed in, then this route will no longer be accessable.
     return (
@@ -41,7 +37,6 @@ const Protected = ({ signedIn, path, component: Component }) => {
 }
 
 const Entry = ({ signedIn, path }) => {
-
     // The user must be signed in to access this route.
     // If the user is NOT signed in, then this route will no longer be accessable.
     return (
@@ -56,5 +51,4 @@ const Entry = ({ signedIn, path }) => {
 
 export const AuthRoute = withRouter(connect(mstp)(Auth));
 export const ProtectedRoute = withRouter(connect(mstp)(Protected));
-
 export const EntryRoute = withRouter(connect(mstp)(Entry));
