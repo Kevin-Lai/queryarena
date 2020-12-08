@@ -12,9 +12,7 @@ const QuestionReducer = (state = {}, action) => {
             newState = action.questions;
             return newState;
         case RECEIVE_QUESTION:
-            //debugger
             newState[action.question.id] = action.question;
-            //debugger
             return newState;
     
         default:
