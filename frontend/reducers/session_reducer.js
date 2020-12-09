@@ -14,8 +14,6 @@ const SessionReducer = (state = _nullSession, action) => {
 
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
-            //debugger
-
             // the user is the prop from the session_actions
             newState = {currentUserId: action.currentUser.id}
             return newState;
