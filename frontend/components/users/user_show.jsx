@@ -16,7 +16,6 @@ class UserShow extends React.Component{
         this.props.fetchUser(this.props.currentUserId);
         this.props.fetchQuestions().then(
             (action) => {
-                //debugger
                 let userQuestions = action.questions.filter(question => question.user_id === this.props.currentUserId);
                 this.setState({userQuestions: userQuestions});
             }
