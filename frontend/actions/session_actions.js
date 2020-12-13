@@ -19,7 +19,6 @@ const signOutCurrentUser = () => {
     }
 }
 
-
 const receiveErrors = (errors) => {
     return {
         type: RECEIVE_ERRORS,
@@ -52,7 +51,6 @@ export const signIn = (user) => {
                 return dispatch(receiveCurrentUser(user))
             },
             (errors) => {
-                //debugger
                 return dispatch(receiveErrors(errors.responseJSON))
             }
         )
