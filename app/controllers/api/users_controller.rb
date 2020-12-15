@@ -15,9 +15,8 @@ class Api::UsersController < ApplicationController
     end
 
     def show
-
         @user = User.find_by(id: params[:id])
-        #debugger
+        
         # By default, there is an implicit "render :same_name_as_action"
         if @user
             render :show
