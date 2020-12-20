@@ -35,8 +35,6 @@ export const fetchQuestions = () => {
     }
 }
 
-
-
 export const fetchQuestion = (questionId) => {
     return (dispatch) => {
         return QuestionAPIUtil.fetchQuestion(questionId).then((question)=>{
@@ -49,6 +47,15 @@ export const fetchQuestion = (questionId) => {
 export const createQuestion = (question) => {
     return (dispatch) => {
         return QuestionAPIUtil.createQuestion(question).then((question)=>{
+                return dispatch(receiveQuestion(question))
+            }
+        );
+    }
+}
+
+export const updateQuestion = (question) => {
+    return (dispatch) => {
+        return QuestionAPIUtil.updateQuestion(question).then((question)=>{
                 return dispatch(receiveQuestion(question))
             }
         );
