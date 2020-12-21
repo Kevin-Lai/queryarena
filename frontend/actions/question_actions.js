@@ -61,3 +61,12 @@ export const updateQuestion = (question) => {
         );
     }
 }
+
+export const deleteQuestion = (questionId) => {
+    return (dispatch) => {
+        return QuestionAPIUtil.deleteQuestion(questionId).then(()=>{
+                return dispatch(removeQuestion(questionId))
+            }
+        );
+    }
+}

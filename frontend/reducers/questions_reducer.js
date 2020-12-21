@@ -1,6 +1,7 @@
 import {
     RECEIVE_QUESTIONS,
-    RECEIVE_QUESTION
+    RECEIVE_QUESTION,
+    REMOVE_QUESTION
 } from '../actions/question_actions';
 
 const QuestionReducer = (state = {}, action) => {
