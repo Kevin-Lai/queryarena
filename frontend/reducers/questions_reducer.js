@@ -15,7 +15,9 @@ const QuestionReducer = (state = {}, action) => {
         case RECEIVE_QUESTION:
             newState[action.question.id] = action.question;
             return newState;
-    
+        case REMOVE_QUESTION:
+            delete newState[action.questionId];
+            return newState;            
         default:
             return state;
     }
