@@ -11,11 +11,9 @@ class Api::SessionsController < ApplicationController
         if @user
             sign_in(@user)
             render "/api/users/show"
-        else 
-            #debugger
+        else
             render json: ["Invalid Username or Password. Please try again."], status: 401
         end
-
     end
 
     def destroy
