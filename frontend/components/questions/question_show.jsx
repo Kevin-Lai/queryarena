@@ -25,6 +25,17 @@ class QuestionShow extends React.Component{
         this.handleAnswers();
     }
 
+    handleDeleteQuestion(){
+        // Only show option to delete for the Question's author
+        // No one else is allowed to delete the question
+        this.props.deleteQuestion(this.state.question.id).then(
+            () => {
+                // After deleting question, redirect to Question Index page
+                this.props.history.push("/");
+            }
+        )
+    }
+
     handleAnswers(){
         this.props.fetchQuestion(this.props.match.params.questionId).then(
             (action) => {
@@ -141,6 +152,11 @@ class QuestionShow extends React.Component{
                                 <button className="question-create-cancel-button" onClick={()=>this.showAnswerForm("Create Answer")}>📝 Answer</button>
                                 <button className="question-create-cancel-button-unused">📶 Follow</button>
                                 <button className="question-create-cancel-button-unused">👤 Request</button>
+                                {
+                                    this.state.question.user_id === this.props.currentUserId ? 
+                                        <button className="question-create-cancel-button" onClick={()=>this.handleDeleteQuestion()}>❌ Delete</button>
+                                        : ""
+                                }
                             </div>
                         </div>
                     </div>
