@@ -19,6 +19,7 @@ class QuestionShow extends React.Component{
         this.handleEditAnswer = this.handleEditAnswer.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.showAnswerForm = this.showAnswerForm.bind(this);
+        this.handleDeleteQuestion = this.deleteQuestion.bind(this);
     }
 
     componentDidMount(){
@@ -81,7 +82,7 @@ class QuestionShow extends React.Component{
                 question_id: this.props.match.params.questionId
             }
         ).then(
-            (action) => {
+            () => {
                 this.setState({showForm: false});
                 this.handleAnswers();
             }
@@ -95,7 +96,7 @@ class QuestionShow extends React.Component{
                 id: this.state.currentUserAnswerId
             }
         ).then(
-            (action) => {
+            () => {
                 this.setState({showForm: false});
                 this.handleAnswers();
             }
@@ -104,7 +105,7 @@ class QuestionShow extends React.Component{
 
     handleDeleteAnswer(){
         this.props.deleteAnswer(this.state.currentUserAnswerId).then(
-            (action) => {
+            () => {
                 this.setState({currentUserAnswerId: ""});
                 this.handleAnswers();
             }
