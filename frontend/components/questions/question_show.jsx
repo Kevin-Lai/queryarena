@@ -19,7 +19,6 @@ class QuestionShow extends React.Component{
         this.handleEditAnswer = this.handleEditAnswer.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.showAnswerForm = this.showAnswerForm.bind(this);
-        this.handleDeleteQuestion = this.deleteQuestion.bind(this);
     }
 
     componentDidMount(){
@@ -29,7 +28,7 @@ class QuestionShow extends React.Component{
     handleDeleteQuestion(){
         // Only show option to delete for the Question's author
         // No one else is allowed to delete the question
-        this.props.deleteQuestion(this.state.question.id).then(
+        this.props.deleteQuestion(this.props.question.id).then(
             () => {
                 // After deleting question, redirect to Question Index page
                 this.props.history.push("/");

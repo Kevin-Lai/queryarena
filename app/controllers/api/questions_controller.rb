@@ -43,7 +43,7 @@ class Api::QuestionsController < ApplicationController
 
         if @question.user_id == current_user.id
             @question.destroy
-            redirect_to api_questions_url
+            #redirect_to api_questions_url
         else
             render json: @question.errors.full_messages, status: 422
         end
