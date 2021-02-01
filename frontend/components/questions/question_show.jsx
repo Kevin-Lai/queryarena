@@ -28,7 +28,7 @@ class QuestionShow extends React.Component{
     handleDeleteQuestion(){
         // Only show option to delete for the Question's author
         // No one else is allowed to delete the question
-        this.props.deleteQuestion(this.props.question.id).then(
+        this.props.deleteQuestion(this.props.match.params.questionId).then(
             () => {
                 // After deleting question, redirect to Question Index page
                 this.props.history.push("/");
