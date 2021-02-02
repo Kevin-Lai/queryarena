@@ -19,6 +19,7 @@ class QuestionShow extends React.Component{
         this.handleEditAnswer = this.handleEditAnswer.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.showAnswerForm = this.showAnswerForm.bind(this);
+        this.handleDeleteQuestion = this.handleDeleteQuestion.bind(this);
     }
 
     componentDidMount(){
