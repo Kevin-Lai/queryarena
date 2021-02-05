@@ -2,6 +2,7 @@ import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import QuestionFormContainer from "../questions/question_form_container"
+import QuestionEditContainer from "../questions/question_edit_container"
 
 function Modal({modal, closeModal}) {
     if (!modal) {
@@ -11,6 +12,9 @@ function Modal({modal, closeModal}) {
     switch (modal) {
         case 'Add Question':
             component = <QuestionFormContainer />;
+            break;
+        case 'Edit Question':
+            component = <QuestionEditContainer />;
             break;
         default:
             return null;
