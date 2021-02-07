@@ -152,7 +152,6 @@ class QuestionShow extends React.Component{
                             <div className="question-item-buttons">
                                 <button className="question-create-cancel-button" onClick={()=>this.showAnswerForm("Create Answer")}>📝 Answer</button>
                                 <button className="question-create-cancel-button-unused">📶 Follow</button>
-                                <button className="question-create-cancel-button-unused">👤 Request</button>
                                 {
                                     this.state.question.user_id === this.props.currentUserId ? 
                                         <div>
