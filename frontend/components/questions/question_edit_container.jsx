@@ -9,7 +9,7 @@ import QuestionEdit from "./question_edit"
 
 const mdtp = (dispatch) => {
     return {
-        updateQuestion: (question) => dispatch(updateQuestion(questionId)),
+        updateQuestion: (questionId) => dispatch(updateQuestion(questionId)),
         closeModal: () => dispatch(closeModal())
     }
 }
