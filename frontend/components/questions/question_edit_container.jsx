@@ -7,6 +7,13 @@ import { withRouter } from 'react-router-dom'
 
 import QuestionEdit from "./question_edit"
 
+const mstp = (state) =>{
+    // debugger
+    return {
+        question: Object.values(state.entities.questions)[0]
+    }
+}
+
 const mdtp = (dispatch) => {
     return {
         updateQuestion: (question) => dispatch(updateQuestion(question)),
@@ -14,4 +21,4 @@ const mdtp = (dispatch) => {
     }
 }
 
-export default withRouter(connect(null, mdtp)(QuestionEdit));
+export default withRouter(connect(mstp, mdtp)(QuestionEdit));
