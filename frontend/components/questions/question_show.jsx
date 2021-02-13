@@ -150,12 +150,12 @@ class QuestionShow extends React.Component{
                             <h1 className="question-show-item">{this.state.question.body}</h1>
                             <div className="temp-space"></div>
                             <div className="question-item-buttons">
-                                <button className="question-create-cancel-button" onClick={()=>this.showAnswerForm("Create Answer")}>📝 Answer</button>
+                                <button className="question-create-cancel-button" onClick={()=>this.showAnswerForm("Create Answer")}>💬 Answer</button>
                                 <button className="question-create-cancel-button-unused">📶 Follow</button>
                                 {
                                     this.state.question.user_id === this.props.currentUserId ? 
                                         <div>
-                                            <button className="question-create-cancel-button" onClick={() => this.props.openModal('Edit Question')}>Edit</button>
+                                            <button className="question-create-cancel-button" onClick={() => this.props.openModal('Edit Question')}>📝 Edit</button>
                                             <button className="question-create-cancel-button" onClick={()=>this.handleDeleteQuestion()}>❌ Delete</button>
                                         </div>
                                         : ""
