@@ -7,7 +7,9 @@ class QuestionEdit extends React.Component{
 
     render(){
         return (
-            <div></div>
+            <div className="question-form">
+                <button className="question-create-x" onClick={() => this.props.closeModal()}>X</button>
+            </div>
         )
     }
 
