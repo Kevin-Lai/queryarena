@@ -5,6 +5,14 @@ class QuestionEdit extends React.Component{
         super(props);
     }
 
+    handleChange(type){
+        return e => {
+            this.setState({
+                [type]: e.currentTarget.value
+            })
+        }
+    }
+
     render(){
         return (
             <div className="question-form">
