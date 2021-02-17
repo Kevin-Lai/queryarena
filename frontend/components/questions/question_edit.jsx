@@ -13,6 +13,10 @@ class QuestionEdit extends React.Component{
         }
     }
 
+    handleSubmit(e){
+        e.preventDefault();
+    }
+
     render(){
         return (
             <div className="question-form">
