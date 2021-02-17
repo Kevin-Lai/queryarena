@@ -15,6 +15,10 @@ class QuestionEdit extends React.Component{
 
     handleSubmit(e){
         e.preventDefault();
+
+        // Update the question after user presses submit
+        // then, reload the page
+        this.props.updateQuestion(this.state).then(this.props.closeModal).then(location.reload());
     }
 
     render(){
