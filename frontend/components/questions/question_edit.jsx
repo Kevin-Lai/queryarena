@@ -3,6 +3,9 @@ import React from 'react';
 class QuestionEdit extends React.Component{
     constructor(props){
         super(props);
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange(type){
