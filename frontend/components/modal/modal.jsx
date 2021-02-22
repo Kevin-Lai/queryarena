@@ -9,12 +9,12 @@ function Modal({modal, closeModal}) {
         return null;
     }
     let component;
-    switch (modal) {
+    switch (modal.formType) {
         case 'Add Question':
             component = <QuestionFormContainer />;
             break;
         case 'Edit Question':
-            component = <QuestionEditContainer />;
+            component = <QuestionEditContainer question={modal.question}/>;
             break;
         default:
             return null;
