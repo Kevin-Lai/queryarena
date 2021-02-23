@@ -155,7 +155,7 @@ class QuestionShow extends React.Component{
                                 {
                                     this.state.question.user_id === this.props.currentUserId ? 
                                         <div>
-                                            <button className="question-create-cancel-button" onClick={() => this.props.openModal('Edit Question')}>📝 Edit</button>
+                                            <button className="question-create-cancel-button" onClick={() => this.props.openModal({formType: 'Edit Question', question: this.state.question})}>📝 Edit</button>
                                             <button className="question-create-cancel-button" onClick={()=>this.handleDeleteQuestion()}>❌ Delete</button>
                                         </div>
                                         : ""
