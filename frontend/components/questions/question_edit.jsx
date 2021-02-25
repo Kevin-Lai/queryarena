@@ -31,6 +31,10 @@ class QuestionEdit extends React.Component{
             <div className="question-form">
                 <button className="question-create-x" onClick={() => this.props.closeModal()}>X</button>
 
+                <div className="question-edit-title-block">
+                    <label className="question-edit-title">Edit Question and Source</label>
+                </div>
+
                 <form onSubmit={this.handleSubmit}>
                     <input className="question-body-input-box" placeholder={"Start your question with \"What\", \"How\", \"Why\", etc."} type="text" value={this.state.body} onChange={this.handleChange("body")}></input>
                     <div className="question-create-buttons-block">
