@@ -53,7 +53,7 @@ class NavBar extends React.Component{
                         <img src={UserProfileImage} />
                     </Link>
                     <div className="add-question-nav-button-block">
-                        <button className="add-question-nav-button" onClick={() => this.props.openModal('Add Question')}>Add Question</button>
+                        <button className="add-question-nav-button" onClick={() => this.props.openModal({formType: 'Add Question'})}>Add Question</button>
                     </div>
                     <button className="nav-button" onClick={()=>this.handleClick()}>Sign Out</button>
                 </nav>
