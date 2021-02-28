@@ -26,6 +26,13 @@ class QuestionShow extends React.Component{
         this.handleAnswers();
     }
 
+    componentDidUpdate(prevProps){
+        //debugger
+        if(this.props.match.params.questionId !== prevProps.match.params.questionId){
+            this.handleAnswers();
+        }
+    }
+
     handleDeleteQuestion(){
         // Only show option to delete for the Question's author
         // No one else is allowed to delete the question
