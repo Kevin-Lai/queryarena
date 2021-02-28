@@ -96,7 +96,7 @@ u10 = User.create!(
 )
 
 
-q1 = Question.create(user_id: guest.id, body: "What is Query Arena?")
+q1 = Question.create(user_id: creator.id, body: "What is Query Arena?")
 q2 = Question.create(user_id: u1.id, body: "How many seconds are in a minute?")
 q3 = Question.create(user_id: u2.id, body: "How many minutes are in a hour?")
 q4 = Question.create(user_id: u3.id, body: "How many hours are in a day?")
@@ -137,6 +137,7 @@ q38 = Question.create(user_id: creator.id, body: "What is FireFox?")
 q39 = Question.create(user_id: creator.id, body: "What is Twitch?")
 q40 = Question.create(user_id: creator.id, body: "What is Amazon?")
 q41 = Question.create(user_id: creator.id, body: "What is Netflix?")
+q42 = Question.create(user_id: guest.id, body: "How would you rate your experience with Query Arena?")
 
 Answer.create(user_id: u10.id, question_id: q1.id, body: "QueryArena, a Quora clone, is a web application that allows users to ask questions and share answers.")
 Answer.create(user_id: u1.id, question_id: q2.id, body: "There are 60 seconds in a minute.")
