@@ -138,6 +138,8 @@ q39 = Question.create(user_id: creator.id, body: "What is Twitch?")
 q40 = Question.create(user_id: creator.id, body: "What is Amazon?")
 q41 = Question.create(user_id: creator.id, body: "What is Netflix?")
 q42 = Question.create(user_id: guest.id, body: "How would you rate your experience with Query Arena?")
+q43 = Question.create(user_id: creator.id, body: "What are the most surreal places to visit?")
+
 
 Answer.create(user_id: u10.id, question_id: q1.id, body: "QueryArena, a Quora clone, is a web application that allows users to ask questions and share answers.")
 Answer.create(user_id: u1.id, question_id: q2.id, body: "There are 60 seconds in a minute.")
