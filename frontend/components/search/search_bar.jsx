@@ -32,6 +32,7 @@ class SearchBar extends React.Component{
     render() {
         return (
             <div className="search-bar">
+                <label className="search-icon">🔍</label>
                 <input className="search-bar-input" type="text" placeholder="Search Query Arena" value={this.state.query} onChange={this.handleChange("query")} onKeyDown={this.handleKeyDown}/>
             </div>
         )
