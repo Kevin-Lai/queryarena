@@ -1,7 +1,14 @@
 .search-bar {
     padding: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .search-bar-input{
-    padding-left: 10px;
+    padding-left: 30px;
+}
+
+.search-icon{
+    position: absolute;
+    margin-left: 5px;
 }
