@@ -11,7 +11,7 @@ function Modal({modal, closeModal}) {
     let component;
     switch (modal.formType) {
         case 'Add Question':
-            component = <QuestionFormContainer />;
+            component = <QuestionFormContainer user={modal.user}/>;
             break;
         case 'Edit Question':
             component = <QuestionEditContainer question={modal.question}/>;
