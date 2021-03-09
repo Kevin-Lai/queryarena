@@ -5,7 +5,8 @@ import QuestionIndex from './question_index';
 
 const mstp = (state) =>{
     return {
-        questions: Object.values(state.entities.questions)
+        questions: Object.values(state.entities.questions),
+        user: Object.values(state.entities.users)[0]
     }
 }
 
