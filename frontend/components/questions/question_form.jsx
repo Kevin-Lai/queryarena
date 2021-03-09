@@ -53,6 +53,7 @@ class QuestionForm extends React.Component{
                             </ul>
                         </div>
                     </div>
+                    <label>{this.props.user.first_name + " " + this.props.user.last_name + " asked"}</label>
                     <input className="question-body-input-box" placeholder={"Start your question with \"What\", \"How\", \"Why\", etc."} type="text" value={this.state.body} onChange={this.handleChange("body")}></input>
                     <div className="question-create-buttons-block">
                         <label></label>
