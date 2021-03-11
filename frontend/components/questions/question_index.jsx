@@ -30,7 +30,7 @@ class QuestionIndex extends React.Component{
             <div className="question-index">
                 <div className="question-index-main-block">
                     <div className="create-question-index-block">
-                        <button className="create-question-button" onClick={() => this.props.openModal({formType: 'Add Question'})}>What is your question or link?</button>
+                        <button className="create-question-button" onClick={() => this.props.openModal({formType: 'Add Question', user:this.props.user})}>What is your question or link?</button>
                     </div>
                     <div className="question-items-list-block">
                         <ul className="question-items-list">
