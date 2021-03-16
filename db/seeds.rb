@@ -141,7 +141,7 @@ q42 = Question.create(user_id: guest.id, body: "How would you rate your experien
 q43 = Question.create(user_id: creator.id, body: "What are the most surreal places to visit?")
 q44 = Question.create(user_id: creator.id, body: "What are some books that will expand our mind?")
 q45 = Question.create(user_id: creator.id, body: "What are the most common mistakes first time entrepreneurs make?")
-
+q46 = Question.create(user_id: creator.id, body: "What is the bravest thing you have ever seen someone do?")
 
 Answer.create(user_id: u10.id, question_id: q1.id, body: "QueryArena, a Quora clone, is a web application that allows users to ask questions and share answers.")
 Answer.create(user_id: u1.id, question_id: q2.id, body: "There are 60 seconds in a minute.")
