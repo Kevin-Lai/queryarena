@@ -146,6 +146,7 @@ q47 = Question.create(user_id: creator.id, body: "What can I learn right now in 
 q48 = Question.create(user_id: creator.id, body: "What is the most beautiful number and why?")
 q49 = Question.create(user_id: creator.id, body: "What are the best mind bending films?")
 q50 = Question.create(user_id: creator.id, body: "Are electrons smaller than atoms?")
+q51 = Question.create(user_id: creator.id, body: "What are electrons?")
 
 Answer.create(user_id: u10.id, question_id: q1.id, body: "QueryArena, a Quora clone, is a web application that allows users to ask questions and share answers.")
 Answer.create(user_id: u1.id, question_id: q2.id, body: "There are 60 seconds in a minute.")
