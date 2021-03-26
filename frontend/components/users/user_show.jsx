@@ -7,7 +7,8 @@ class UserShow extends React.Component{
         super(props);
 
         this.state = {
-            userQuestions: ""
+            userQuestions: "",
+            selectedOption: 0
         }
     }
 
