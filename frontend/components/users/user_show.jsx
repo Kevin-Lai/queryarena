@@ -46,6 +46,7 @@ class UserShow extends React.Component{
         }) : "";
 
         let numberOfQuestions = this.state.userQuestions ? this.state.userQuestions.length : 0;
+        let numberOfAnswers = this.props.user.answers ? this.props.user.answers.length : 0;
 
         return (
             <div>
