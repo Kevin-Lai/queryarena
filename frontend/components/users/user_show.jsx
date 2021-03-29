@@ -48,6 +48,15 @@ class UserShow extends React.Component{
         let numberOfQuestions = this.state.userQuestions ? this.state.userQuestions.length : 0;
         let numberOfAnswers = this.props.user.answers ? this.props.user.answers.length : 0;
 
+        let answersList = this.props.user.answers ? this.props.user.answers.map((answer, index)=>{
+            return (
+                <li className="answer-item" key={"answer #" + index}>
+                    {answer.body}
+                </li>
+            )
+        }) : "";
+
+
         return (
             <div>
                 <div className="user-info-block">
