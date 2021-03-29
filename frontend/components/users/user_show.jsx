@@ -56,6 +56,15 @@ class UserShow extends React.Component{
             )
         }) : "";
 
+        let selectedList;
+
+        switch(this.state.selectedOption){
+            case 1:
+                selectedList = answersList;
+                break;
+            default:
+                selectedList = list;
+        }
 
         return (
             <div>
