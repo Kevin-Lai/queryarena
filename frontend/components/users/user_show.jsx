@@ -23,6 +23,10 @@ class UserShow extends React.Component{
         );
     }
 
+    handleOnClick(optionNumber){
+        this.setState({selectedOption: optionNumber});
+    }
+
     render(){
         // don't render until user has been fetched
         if (!this.props.user){
