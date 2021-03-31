@@ -79,7 +79,7 @@ class UserShow extends React.Component{
                 </div>
                 <div className="user-questions-block">
                     <ul className="user-questions-list">
-                        {list}
+                        {selectedList}
                     </ul>
                 </div>
             </div>
