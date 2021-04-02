@@ -78,7 +78,9 @@ class UserShow extends React.Component{
                 </div>
                 <div className="user-info-block">
                     <div className="user-questions-number-block">
-                        <label className="user-questions-number">{numberOfQuestions === 1 ? numberOfQuestions+" Question" : numberOfQuestions+" Questions"}</label>
+                        <button className="user-questions-number" onClick={()=>this.handleOnClick(0)}>
+                            {numberOfQuestions === 1 ? numberOfQuestions+" Question" : numberOfQuestions+" Questions"}
+                        </button>
                     </div>
                 </div>
                 <div className="user-questions-block">
