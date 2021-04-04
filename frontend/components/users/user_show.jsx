@@ -10,6 +10,8 @@ class UserShow extends React.Component{
             userQuestions: "",
             selectedOption: 0
         }
+
+        this.handleOnClick = this.handleOnClick.bind(this);
     }
 
     componentDidMount(){
