@@ -83,6 +83,7 @@ class UserShow extends React.Component{
                         <button className="user-questions-number" onClick={()=>this.handleOnClick(0)}>
                             {numberOfQuestions === 1 ? numberOfQuestions+" Question" : numberOfQuestions+" Questions"}
                         </button>
+                        <label className="user-questions-number">|</label>
                         <button className="user-questions-number" onClick={()=>this.handleOnClick(1)}>
                             {numberOfAnswers === 1 ? numberOfAnswers+" Answer" : numberOfAnswers+" Answers"}
                         </button>
