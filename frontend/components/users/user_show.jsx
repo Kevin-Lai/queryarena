@@ -57,7 +57,7 @@ class UserShow extends React.Component{
         let answersList = this.props.user.answers ? this.props.user.answers.map((answer, index)=>{
             return (
                 <li className="answer-item" key={"answer #" + index}>
-                    <Link to={"/questions/"+answer.question_id}>{answer.body}</Link>
+                    <Link className="question-item-link" to={"/questions/"+answer.question_id}>{answer.body}</Link>
                 </li>
             )
         }) : "";
