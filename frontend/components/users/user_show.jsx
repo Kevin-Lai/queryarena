@@ -52,7 +52,7 @@ class UserShow extends React.Component{
         }) : "";
 
         let numberOfQuestions = this.state.userQuestions ? this.state.userQuestions.length : 0;
-        let numberOfAnswers = this.props.user.answers ? this.props.user.answers.length : 0;
+        let totalUserAnswers = this.props.user.answers ? this.props.user.answers.length : 0;
 
         let answersList = this.props.user.answers ? this.props.user.answers.map((answer, index)=>{
             return (
@@ -85,7 +85,7 @@ class UserShow extends React.Component{
                         </button>
                         <label className="user-questions-number">|</label>
                         <button className="user-questions-number" onClick={()=>this.handleOnClick(1)}>
-                            {numberOfAnswers === 1 ? numberOfAnswers+" Answer" : numberOfAnswers+" Answers"}
+                            {totalUserAnswers === 1 ? totalUserAnswers+" Answer" : totalUserAnswers+" Answers"}
                         </button>
                     </div>
                 </div>
