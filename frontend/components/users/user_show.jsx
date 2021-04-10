@@ -51,7 +51,7 @@ class UserShow extends React.Component{
             )
         }) : "";
 
-        let numberOfQuestions = this.state.userQuestions ? this.state.userQuestions.length : 0;
+        let totalUserQuestions = this.state.userQuestions ? this.state.userQuestions.length : 0;
         let totalUserAnswers = this.props.user.answers ? this.props.user.answers.length : 0;
 
         let answersList = this.props.user.answers ? this.props.user.answers.map((answer, index)=>{
@@ -81,7 +81,7 @@ class UserShow extends React.Component{
                 <div className="user-info-block">
                     <div className="user-questions-number-block">
                         <button className="user-questions-number" onClick={()=>this.handleOnClick(0)}>
-                            {numberOfQuestions === 1 ? numberOfQuestions+" Question" : numberOfQuestions+" Questions"}
+                            {totalUserQuestions === 1 ? totalUserQuestions+" Question" : totalUserQuestions+" Questions"}
                         </button>
                         <label className="user-questions-number">|</label>
                         <button className="user-questions-number" onClick={()=>this.handleOnClick(1)}>
