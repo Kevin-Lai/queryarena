@@ -51,7 +51,7 @@ class UserShow extends React.Component{
             )
         }) : "";
 
-        let totalUserQuestions = this.state.userQuestions ? this.state.userQuestions.length : 0;
+        let totalUserQuestions = this.props.user.questions ? this.props.user.questions.length : 0;
         let totalUserAnswers = this.props.user.answers ? this.props.user.answers.length : 0;
 
         let answersList = this.props.user.answers ? this.props.user.answers.map((answer, index)=>{
