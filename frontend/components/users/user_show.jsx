@@ -36,7 +36,7 @@ class UserShow extends React.Component{
         }
 
         // In case the user has not created any questions
-        let list = this.state.userQuestions ? this.state.userQuestions.map((question, index)=>{
+        let questionsList = this.state.userQuestions ? this.state.userQuestions.map((question, index)=>{
 
             let numberOfAnswers = question.answers ? question.answers.length : 0;
 
@@ -69,7 +69,7 @@ class UserShow extends React.Component{
                 selectedList = answersList;
                 break;
             default:
-                selectedList = list;
+                selectedList = questionsList;
         }
 
         return (
