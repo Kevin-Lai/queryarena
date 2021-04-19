@@ -35,7 +35,7 @@ QueryArena is a web application that allows users to ask questions and share ans
 * Once signed in, the splash page will always redirect to the questions index page unless the user signs out.
 ---
 ### Questions
-![Show Question](https://github.com/Kevin-Lai/queryarena/blob/master/images/question_show.gif)
+![Show Question](https://github.com/Kevin-Lai/queryarena/blob/master/images/show_question.gif)
 * Users can view all of the questions posted to the website on the questions index page.
 * Users can view each question's individual show page by clicking on the question's text.
 
