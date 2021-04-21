@@ -60,7 +60,7 @@ QueryArena is a web application that allows users to ask questions and share ans
 ### User Profile Page
 ![User Profile](https://github.com/Kevin-Lai/queryarena/blob/master/images/user_profile.gif)
 * Users can access their profile page to see all questions that they have posted to the site.
-* Users can see the total number of questions that they have posted on the site.
+* Users can see all of questions and answers that they have posted on the site.
 * Users can see their full name displayed on their profile page.
 ---
 ### Future Planned Features
