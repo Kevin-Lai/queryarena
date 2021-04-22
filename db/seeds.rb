@@ -152,6 +152,7 @@ q53 = Question.create(user_id: creator.id, body: "What is an atom?")
 q54 = Question.create(user_id: creator.id, body: "What does DNA stand for?")
 q55 = Question.create(user_id: creator.id, body: "How many bones are in the human body?")
 q56 = Question.create(user_id: creator.id, body: "The concept of gravity was discovered by which famous physicist?")
+q57 = Question.create(user_id: creator.id, body: "What is the hardest natural substance on Earth?")
 
 Answer.create(user_id: u10.id, question_id: q1.id, body: "QueryArena, a Quora clone, is a web application that allows users to ask questions and share answers.")
 Answer.create(user_id: u1.id, question_id: q2.id, body: "There are 60 seconds in a minute.")
