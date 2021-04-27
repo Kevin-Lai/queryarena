@@ -157,6 +157,7 @@ q58 = Question.create(user_id: creator.id, body: "Which is the main gas that mak
 q59 = Question.create(user_id: creator.id, body: "What percent of DNA do humans share with chimpanzees?")
 q60 = Question.create(user_id: creator.id, body: "What is the most abundant gas in the Earth’s atmosphere?")
 q61 = Question.create(user_id: creator.id, body: "What is the tallest animal in the world?")
+q62 = Question.create(user_id: creator.id, body: "What mineral is essential for our bones?")
 
 Answer.create(user_id: u10.id, question_id: q1.id, body: "QueryArena, a Quora clone, is a web application that allows users to ask questions and share answers.")
 Answer.create(user_id: u1.id, question_id: q2.id, body: "There are 60 seconds in a minute.")
