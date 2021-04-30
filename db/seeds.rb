@@ -161,6 +161,7 @@ q62 = Question.create(user_id: creator.id, body: "What mineral is essential for 
 q63 = Question.create(user_id: creator.id, body: "What temperature does water boil?")
 q64 = Question.create(user_id: creator.id, body: "What organ pumps blood to the rest of the human body?")
 q65 = Question.create(user_id: creator.id, body: "How many elements are there on the periodic table?")
+q66 = Question.create(user_id: creator.id, body: "What is the name of the galaxy that contains our solar system?")
 
 Answer.create(user_id: u10.id, question_id: q1.id, body: "QueryArena, a Quora clone, is a web application that allows users to ask questions and share answers.")
 Answer.create(user_id: u1.id, question_id: q2.id, body: "There are 60 seconds in a minute.")
