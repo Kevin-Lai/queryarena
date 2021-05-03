@@ -163,6 +163,7 @@ q64 = Question.create(user_id: creator.id, body: "What organ pumps blood to the 
 q65 = Question.create(user_id: creator.id, body: "How many elements are there on the periodic table?")
 q66 = Question.create(user_id: creator.id, body: "What is the name of the galaxy that contains our solar system?")
 q67 = Question.create(user_id: creator.id, body: "What do you call the hot liquid rock under the surface of the Earth?")
+q68 = Question.create(user_id: creator.id, body: "What is the longest river on Earth?")
 
 Answer.create(user_id: u10.id, question_id: q1.id, body: "QueryArena, a Quora clone, is a web application that allows users to ask questions and share answers.")
 Answer.create(user_id: u1.id, question_id: q2.id, body: "There are 60 seconds in a minute.")
