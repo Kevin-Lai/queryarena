@@ -37,12 +37,10 @@ class SignInForm extends React.Component{
 
     handleDemo(e){
         e.preventDefault();
-        
+
         this.state = {
             email: 'guest@queryarena.com',
-            password: 'password',
-            first_name: "Guest",
-            last_name: "User"
+            password: 'password'
         };
 
         // After setting the current state to the guest info,
