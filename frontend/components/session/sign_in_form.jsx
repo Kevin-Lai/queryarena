@@ -21,7 +21,6 @@ class SignInForm extends React.Component{
     }
 
     handleSubmit(e){
-        e.preventDefault();
         this.props.submitEvent(this.state).then( (action) => {
                 return this.props.history.push("/")
             }
@@ -37,6 +36,8 @@ class SignInForm extends React.Component{
     }
 
     handleDemo(e){
+        e.preventDefault();
+        
         this.state = {
             email: 'guest@queryarena.com',
             password: 'password',
