@@ -20,7 +20,7 @@ class SignInForm extends React.Component{
         this.props.clearErrors();
     }
 
-    handleSubmit(e){
+    handleSubmit(){
         this.props.submitEvent(this.state).then( (action) => {
                 return this.props.history.push("/")
             }
@@ -45,7 +45,7 @@ class SignInForm extends React.Component{
 
         // After setting the current state to the guest info,
         // execute handleSubmit() to sign in the guest user
-        this.handleSubmit(e);
+        this.handleSubmit();
     }
 
     render(){
