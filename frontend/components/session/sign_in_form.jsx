@@ -38,7 +38,7 @@ class SignInForm extends React.Component{
     handleDemo(e){
         e.preventDefault();
 
-        this.state = {
+        const demoUser = {
             email: 'guest@queryarena.com',
             password: 'password'
         };
