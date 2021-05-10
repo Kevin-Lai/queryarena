@@ -20,7 +20,7 @@ class SignInForm extends React.Component{
         this.props.clearErrors();
     }
 
-    handleSubmit(){
+    handleSubmit(e){
         this.props.submitEvent(this.state).then( (action) => {
                 return this.props.history.push("/")
             }
@@ -42,6 +42,9 @@ class SignInForm extends React.Component{
             email: 'guest@queryarena.com',
             password: 'password'
         };
+
+		// speed in milliseconds for each char
+		const loginAnimationSpeed = 120;
 
         // After setting the current state to the guest info,
         // execute handleSubmit() to sign in the guest user
