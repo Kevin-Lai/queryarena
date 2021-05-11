@@ -27,6 +27,13 @@ class SignInForm extends React.Component{
         );
     }
 
+	handleLogin(){
+	    this.props.submitEvent(this.state).then( (action) => {
+                return this.props.history.push("/")
+            }
+        );
+	}
+
     handleChange(fieldType){
         return event => {
             this.setState({
