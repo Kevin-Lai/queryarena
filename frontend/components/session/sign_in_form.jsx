@@ -21,10 +21,8 @@ class SignInForm extends React.Component{
     }
 
     handleSubmit(e){
-        this.props.submitEvent(this.state).then( (action) => {
-                return this.props.history.push("/")
-            }
-        );
+		e.preventDefault();
+		this.handleLogin();
     }
 
 	handleLogin(){
