@@ -14,6 +14,7 @@ class SignInForm extends React.Component{
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleDemo = this.handleDemo.bind(this);
+		this.handleLogin = this.handleLogin.bind(this);
     }
 
     componentDidMount(){
