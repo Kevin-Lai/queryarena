@@ -52,9 +52,30 @@ class SignInForm extends React.Component{
 		// speed in milliseconds for each char
 		const loginAnimationSpeed = 120;
 
-        // After setting the current state to the guest info,
-        // execute handleSubmit() to sign in the guest user
-        this.handleSubmit();
+		// nested function to have access to the demoUser obj
+        const animatePassword = ()=>{
+
+            let passwordAnimationInterval = setInterval( ()=>{
+				// if the password has not yet reached the max length, then continue the animation interval
+                if(this.state.password !== demoUser.password) {
+                    // update the password after each char is added
+                    let passwordText = demoUser.password.slice(0, this.state.password.length + 1);
+					
+					// set the password state to the current password text
+                    this.setState({
+                        password: passwordText
+                    });
+                }
+                else{
+                    // stop the animation once it matches
+                    clearInterval(passwordAnimationInterval);
+                    
+                    // After setting the current state to the guest info,
+                    // execute handleLogin() to sign in the guest user
+                    this.handleLogin();
+                }
+            }, loginAnimationSpeed);
+        }
     }
 
     render(){
