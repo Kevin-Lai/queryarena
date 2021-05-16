@@ -76,6 +76,27 @@ class SignInForm extends React.Component{
                 }
             }, loginAnimationSpeed);
         }
+		
+		// keep running the animation until both the email and the password matches the demo user
+        let emailAnimationInterval = setInterval(()=>{
+            // if the email has not yet reached the max length, then continue the animation interval
+			if(this.state.email !== demoUser.email){
+                // update the email after each char is added
+                let emailText = demoUser.email.slice(0, this.state.email.length + 1);
+
+				// set the password state to the current email text
+                this.setState({
+                    email: emailText 
+                });
+            }
+            else{
+                // stop the animation once it matches
+                clearInterval(emailAnimationInterval);
+
+                // once the email address animation has finished, begin the password animation
+                animatePassword();
+            }
+        }, loginAnimationSpeed)
     }
 
     render(){
