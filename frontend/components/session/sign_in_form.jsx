@@ -6,9 +6,7 @@ class SignInForm extends React.Component{
 
         this.state = {
             email: "",
-            password: "",
-            first_name: "",
-            last_name: ""
+            password: ""
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -27,10 +25,7 @@ class SignInForm extends React.Component{
     }
 
 	handleLogin(){
-	    this.props.submitEvent(this.state).then( (action) => {
-                return this.props.history.push("/")
-            }
-        );
+	    this.props.submitEvent(this.state);
 	}
 
     handleChange(fieldType){
@@ -96,7 +91,7 @@ class SignInForm extends React.Component{
                 // once the email address animation has finished, begin the password animation
                 animatePassword();
             }
-        }, loginAnimationSpeed)
+        }, loginAnimationSpeed);
     }
 
     render(){
