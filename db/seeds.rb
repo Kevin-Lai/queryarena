@@ -172,7 +172,6 @@ q73 = Question.create(user_id: creator.id, body: "H2SO4 is the chemical formula 
 q74 = Question.create(user_id: creator.id, body: "What is the atomic symbol of carbon?")
 q75 = Question.create(user_id: creator.id, body: "What is 100 degree Celsius in Fahrenheit?")
 
-
 Answer.create(user_id: u10.id, question_id: q1.id, body: "QueryArena, a Quora clone, is a web application that allows users to ask questions and share answers.")
 Answer.create(user_id: u1.id, question_id: q2.id, body: "There are 60 seconds in a minute.")
 Answer.create(user_id: u2.id, question_id: q3.id, body: "There are 60 minutes in a hour.")
@@ -187,4 +186,4 @@ Answer.create(user_id: guest.id, question_id: q11.id, body: "There are 1000 mill
 Answer.create(user_id: guest.id, question_id: q21.id, body: "No. The earth is actually round.")
 Answer.create(user_id: creator.id, question_id: q32.id, body: "The National Aeronautics and Space Administration, also known as NASA, is an independent agency of the U.S. federal government responsible for the civilian space program, as well as aeronautics and space research.")
 Answer.create(user_id: creator.id, question_id: q34.id, body: "The Venus flytrap (Dionaea muscipula) is a carnivorous plant native to subtropical wetlands on the East Coast of the United States in North Carolina and South Carolina.")
-
+Answer.create(user_id: guest.id, question_id: q56.id, body: "Isaac Newton")
