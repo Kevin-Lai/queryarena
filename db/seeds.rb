@@ -187,3 +187,4 @@ Answer.create(user_id: guest.id, question_id: q21.id, body: "No. The earth is ac
 Answer.create(user_id: creator.id, question_id: q32.id, body: "The National Aeronautics and Space Administration, also known as NASA, is an independent agency of the U.S. federal government responsible for the civilian space program, as well as aeronautics and space research.")
 Answer.create(user_id: creator.id, question_id: q34.id, body: "The Venus flytrap (Dionaea muscipula) is a carnivorous plant native to subtropical wetlands on the East Coast of the United States in North Carolina and South Carolina.")
 Answer.create(user_id: guest.id, question_id: q56.id, body: "Isaac Newton")
+Answer.create(user_id: guest.id, question_id: q61.id, body: "The giraffe is the tallest land animal in the world.")
