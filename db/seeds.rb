@@ -192,3 +192,4 @@ Answer.create(user_id: guest.id, question_id: q61.id, body: "The giraffe is the 
 Answer.create(user_id: guest.id, question_id: q64.id, body: "The heart")
 Answer.create(user_id: guest.id, question_id: q68.id, body: "The Nile River, located in Egypt, is the longest river on Earth.")
 Answer.create(user_id: guest.id, question_id: q69.id, body: "Herbivores")
+Answer.create(user_id: guest.id, question_id: q70.id, body: "Carnivores")
