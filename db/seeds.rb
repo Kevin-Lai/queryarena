@@ -192,6 +192,7 @@ Answer.create(user_id: creator.id, question_id: q34.id, body: "The Venus flytrap
 Answer.create(user_id: guest.id, question_id: q56.id, body: "Isaac Newton")
 Answer.create(user_id: guest.id, question_id: q61.id, body: "The giraffe is the tallest land animal in the world.")
 Answer.create(user_id: guest.id, question_id: q64.id, body: "The heart")
+Answer.create(user_id: guest.id, question_id: q65.id, body: "118")
 Answer.create(user_id: guest.id, question_id: q68.id, body: "The Nile River, located in Egypt, is the longest river on Earth.")
 Answer.create(user_id: guest.id, question_id: q69.id, body: "Herbivores")
 Answer.create(user_id: guest.id, question_id: q70.id, body: "Carnivores")
