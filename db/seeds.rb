@@ -174,6 +174,7 @@ q75 = Question.create(user_id: creator.id, body: "What is 100 degree Celsius in 
 q76 = Question.create(user_id: creator.id, body: "How many valves are in the heart of human body?")
 q77 = Question.create(user_id: creator.id, body: "What is the freezing point of water?")
 q78 = Question.create(user_id: creator.id, body: "What is atomic nuclei made of?")
+q79 = Question.create(user_id: creator.id, body: "What is the name of the green pigment in plants which is also helpful in absorbing sunlight?")
 
 Answer.create(user_id: u10.id, question_id: q1.id, body: "QueryArena, a Quora clone, is a web application that allows users to ask questions and share answers.")
 Answer.create(user_id: u1.id, question_id: q2.id, body: "There are 60 seconds in a minute.")
