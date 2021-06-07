@@ -179,6 +179,7 @@ q80 = Question.create(user_id: creator.id, body: "How many times does hummingbir
 q81 = Question.create(user_id: creator.id, body: "What is quicksilver?")
 q82 = Question.create(user_id: creator.id, body: "What tissue connects muscles to bones?")
 q83 = Question.create(user_id: creator.id, body: "What is the largest animal on earth?")
+q84 = Question.create(user_id: creator.id, body: "What is the standard unit of measurement for energy?")
 
 Answer.create(user_id: u10.id, question_id: q1.id, body: "QueryArena, a Quora clone, is a web application that allows users to ask questions and share answers.")
 Answer.create(user_id: u1.id, question_id: q2.id, body: "There are 60 seconds in a minute.")
