@@ -182,6 +182,7 @@ q83 = Question.create(user_id: creator.id, body: "What is the largest animal on 
 q84 = Question.create(user_id: creator.id, body: "What is the standard unit of measurement for energy?")
 q85 = Question.create(user_id: creator.id, body: "What are animals, which eat both plants and animals, called?")
 q86 = Question.create(user_id: creator.id, body: "What is the closest planet to the sun?")
+q87 = Question.create(user_id: creator.id, body: "Which organelle is also called the powerhouse of the cell?")
 
 Answer.create(user_id: u10.id, question_id: q1.id, body: "QueryArena, a Quora clone, is a web application that allows users to ask questions and share answers.")
 Answer.create(user_id: u1.id, question_id: q2.id, body: "There are 60 seconds in a minute.")
