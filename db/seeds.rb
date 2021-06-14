@@ -185,6 +185,7 @@ q86 = Question.create(user_id: creator.id, body: "What is the closest planet to 
 q87 = Question.create(user_id: creator.id, body: "Which organelle is also called the powerhouse of the cell?")
 q88 = Question.create(user_id: creator.id, body: "What is the standard unit of measurement for force?")
 q89 = Question.create(user_id: creator.id, body: "What is the lightest element in the periodic table?")
+q90 = Question.create(user_id: creator.id, body: "What elements are the most common in the human body?")
 
 Answer.create(user_id: u10.id, question_id: q1.id, body: "QueryArena, a Quora clone, is a web application that allows users to ask questions and share answers.")
 Answer.create(user_id: u1.id, question_id: q2.id, body: "There are 60 seconds in a minute.")
