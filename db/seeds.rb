@@ -209,3 +209,4 @@ Answer.create(user_id: guest.id, question_id: q68.id, body: "The Nile River, loc
 Answer.create(user_id: guest.id, question_id: q69.id, body: "Herbivores")
 Answer.create(user_id: guest.id, question_id: q70.id, body: "Carnivores")
 Answer.create(user_id: creator.id, question_id: q81.id, body: "Quicksilver is the alternative name for the metal Mercury.")
+Answer.create(user_id: guest.id, question_id: q82.id, body: "Tendon")
