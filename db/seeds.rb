@@ -198,6 +198,7 @@ Answer.create(user_id: u7.id, question_id: q8.id, body: "There are 4 weeks in a 
 Answer.create(user_id: u8.id, question_id: q9.id, body: "There are 52 weeks in a year.")
 Answer.create(user_id: u9.id, question_id: q10.id, body: "There are 12 months in a year.")
 Answer.create(user_id: guest.id, question_id: q11.id, body: "There are 1000 milliseconds in one second.")
+Answer.create(user_id: creator.id, question_id: q20.id, body: "No. Whales are marine mammals. Unlike fish, whales are warmblooded and do not have gills.")
 Answer.create(user_id: guest.id, question_id: q21.id, body: "No. The earth is actually round.")
 Answer.create(user_id: creator.id, question_id: q32.id, body: "The National Aeronautics and Space Administration, also known as NASA, is an independent agency of the U.S. federal government responsible for the civilian space program, as well as aeronautics and space research.")
 Answer.create(user_id: creator.id, question_id: q34.id, body: "The Venus flytrap (Dionaea muscipula) is a carnivorous plant native to subtropical wetlands on the East Coast of the United States in North Carolina and South Carolina.")
