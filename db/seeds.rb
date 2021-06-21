@@ -190,6 +190,7 @@ q91 = Question.create(user_id: creator.id, body: "What is the single insight tha
 q92 = Question.create(user_id: creator.id, body: "If you were to have a superpower, what would you like it to be?")
 q93 = Question.create(user_id: creator.id, body: "What is the coolest thing that happens when gravity is zero?")
 q94 = Question.create(user_id: creator.id, body: "If you could revive one person from the dead, who would it be?")
+q95 = Question.create(user_id: guest.id, body: "If you could travel at light speed, what would you see?")
 
 Answer.create(user_id: u10.id, question_id: q1.id, body: "QueryArena, a Quora clone, is a web application that allows users to ask questions and share answers.")
 Answer.create(user_id: u1.id, question_id: q2.id, body: "There are 60 seconds in a minute.")
