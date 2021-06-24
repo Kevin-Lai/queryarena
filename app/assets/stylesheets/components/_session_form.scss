@@ -160,8 +160,14 @@ input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
     height: 100vh;
     display: flex;
     justify-content: center;
+    overflow: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
 }
 
 .session-center-block {
