@@ -143,16 +143,16 @@ input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
     color: #fff;
     text-align: center;
     cursor: pointer;
-    background: #3e78ad;
+    background: #0053a1;
     border: 1px solid #3a66ad;
     border-radius: 3px;
     padding: 3px 7px 4px 7px;
     display: inline-block;
-    opacity: .5;
 }
 
 .submit-button:hover, .demo-login-button:hover {
-    opacity: 1;
+    color: black;
+    background: #e2cc00;
 }
 
 .session-form-background {
