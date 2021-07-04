@@ -209,6 +209,7 @@ Answer.create(user_id: guest.id, question_id: q21.id, body: "No. The earth is ac
 Answer.create(user_id: guest.id, question_id: q24.id, body: "The skin is the organ that covers the human body.")
 Answer.create(user_id: creator.id, question_id: q25.id, body: "Alexander Graham Bell")
 Answer.create(user_id: creator.id, question_id: q26.id, body: "Chloroplasts")
+Answer.create(user_id: creator.id, question_id: q27.id, body: "Water boils at 212°F or 100°C")
 Answer.create(user_id: creator.id, question_id: q28.id, body: "Antarctic blue whale")
 Answer.create(user_id: creator.id, question_id: q32.id, body: "The National Aeronautics and Space Administration, also known as NASA, is an independent agency of the U.S. federal government responsible for the civilian space program, as well as aeronautics and space research.")
 Answer.create(user_id: creator.id, question_id: q34.id, body: "The Venus flytrap (Dionaea muscipula) is a carnivorous plant native to subtropical wetlands on the East Coast of the United States in North Carolina and South Carolina.")
