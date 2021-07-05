@@ -211,6 +211,7 @@ Answer.create(user_id: creator.id, question_id: q25.id, body: "Alexander Graham 
 Answer.create(user_id: creator.id, question_id: q26.id, body: "Chloroplasts")
 Answer.create(user_id: creator.id, question_id: q27.id, body: "Water boils at 212°F or 100°C")
 Answer.create(user_id: creator.id, question_id: q28.id, body: "Antarctic blue whale")
+Answer.create(user_id: creator.id, question_id: q29.id, body: "Solid, liquid and water")
 Answer.create(user_id: creator.id, question_id: q32.id, body: "The National Aeronautics and Space Administration, also known as NASA, is an independent agency of the U.S. federal government responsible for the civilian space program, as well as aeronautics and space research.")
 Answer.create(user_id: creator.id, question_id: q34.id, body: "The Venus flytrap (Dionaea muscipula) is a carnivorous plant native to subtropical wetlands on the East Coast of the United States in North Carolina and South Carolina.")
 Answer.create(user_id: u1.id, question_id: q41.id, body: "Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.")
