@@ -204,6 +204,7 @@ Answer.create(user_id: u8.id, question_id: q9.id, body: "There are 52 weeks in a
 Answer.create(user_id: u9.id, question_id: q10.id, body: "There are 12 months in a year.")
 Answer.create(user_id: guest.id, question_id: q11.id, body: "There are 1000 milliseconds in one second.")
 Answer.create(user_id: u1.id, question_id: q12.id, body: "Most species of grass are green due to their chlorophyll.")
+Answer.create(user_id: u5.id, question_id: q13.id, body: "The sky is blue during the day and black at night.")
 Answer.create(user_id: creator.id, question_id: q20.id, body: "No. Whales are marine mammals. Unlike fish, whales are warmblooded and do not have gills.")
 Answer.create(user_id: guest.id, question_id: q21.id, body: "No. The earth is actually round.")
 Answer.create(user_id: guest.id, question_id: q24.id, body: "The skin is the organ that covers the human body.")
