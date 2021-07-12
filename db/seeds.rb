@@ -227,5 +227,6 @@ Answer.create(user_id: guest.id, question_id: q68.id, body: "The Nile River, loc
 Answer.create(user_id: guest.id, question_id: q69.id, body: "Herbivores")
 Answer.create(user_id: guest.id, question_id: q70.id, body: "Carnivores")
 Answer.create(user_id: u3.id, question_id: q80.id, body: "The Giant Hummingbird beats its wings 10-15 times per second.")
+Answer.create(user_id: creator.id, question_id: q80.id, body: "The fastest recorded rate is about 80 beats per second on an Amethyst Woodstar Hummingbird.")
 Answer.create(user_id: creator.id, question_id: q81.id, body: "Quicksilver is the alternative name for the metal Mercury.")
 Answer.create(user_id: guest.id, question_id: q82.id, body: "Tendon")
