@@ -206,6 +206,7 @@ Answer.create(user_id: u9.id, question_id: q10.id, body: "There are 12 months in
 Answer.create(user_id: guest.id, question_id: q11.id, body: "There are 1000 milliseconds in one second.")
 Answer.create(user_id: u1.id, question_id: q12.id, body: "Most species of grass are green due to their chlorophyll.")
 Answer.create(user_id: u5.id, question_id: q13.id, body: "The sky is blue during the day and black at night.")
+Answer.create(user_id: u2.id, question_id: q14.id, body: "Violet and blue light have the shortest wavelengths and red light has the longest. Therefore, blue light is scattered more than red light and the sky appears blue during the day.")
 Answer.create(user_id: creator.id, question_id: q20.id, body: "No. Whales are marine mammals. Unlike fish, whales are warmblooded and do not have gills.")
 Answer.create(user_id: guest.id, question_id: q21.id, body: "No. The earth is actually round.")
 Answer.create(user_id: guest.id, question_id: q24.id, body: "The skin is the organ that covers the human body.")
