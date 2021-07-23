@@ -6,6 +6,7 @@ import { AuthRoute, ProtectedRoute, EntryRoute } from '../util/route_util';
 import UserShowContainer from './users/user_show_container';
 import SessionFormContainer from "./session/session_form_container";
 import QuestionShowContainer from './questions/question_show_container';
+import AnswerIndexContainer from './answers/answer_index_container';
 
 import Modal from "./modal/modal";
 
@@ -20,6 +21,7 @@ const App = ({ children }) => (
       <ProtectedRoute exact path="/users/:userId" component={UserShowContainer} />
       <ProtectedRoute exact path="/questions/:questionId" component={QuestionShowContainer} />
       <ProtectedRoute path="/search" component={SearchIndexContainer} />
+      <ProtectedRoute path="/answers" component={AnswerIndexContainer} />
       <AuthRoute path="/signup" component={SessionFormContainer} />
       <AuthRoute path="/signin" component={SessionFormContainer} />
       <EntryRoute exact path="/"/>
