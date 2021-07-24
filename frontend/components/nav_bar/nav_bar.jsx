@@ -35,7 +35,7 @@ class NavBar extends React.Component{
                     <Link className="title-nav-button" to="/">Query Arena</Link>
                     <Link className="home-nav-button" to="/">🏠 Home</Link>
                     <button className="nav-button-unused">📰 Following</button>
-                    <Link className="home-nav-button" to="/">📝 Answer</Link>
+                    <Link className="home-nav-button" to="/answers">📝 Answer</Link>
                     <button className="nav-button-unused">👪 Spaces</button>
                     <button className="nav-button-unused">🔔 Notifications</button>
                     <button className="about">ℹ️ About
