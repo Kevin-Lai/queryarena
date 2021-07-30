@@ -223,6 +223,7 @@ Answer.create(user_id: creator.id, question_id: q33.id, body: "Pitcher plants ar
 Answer.create(user_id: creator.id, question_id: q34.id, body: "The Venus flytrap (Dionaea muscipula) is a carnivorous plant native to subtropical wetlands on the East Coast of the United States in North Carolina and South Carolina.")
 Answer.create(user_id: u4.id, question_id: q35.id, body: "GitHub is a for-profit company that offers a cloud-based Git repository hosting service.")
 Answer.create(user_id: u2.id, question_id: q36.id, body: "LinkedIn is the world's largest professional network on the internet.")
+Answer.create(user_id: u5.id, question_id: q37.id, body: "YouTube is an American online video sharing service where users can create their own profile, upload videos, watch, like and comment on other videos.")
 Answer.create(user_id: u1.id, question_id: q41.id, body: "Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.")
 Answer.create(user_id: u1.id, question_id: q42.id, body: "It's great!")
 Answer.create(user_id: guest.id, question_id: q56.id, body: "Isaac Newton")
