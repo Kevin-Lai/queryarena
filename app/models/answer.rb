@@ -21,4 +21,8 @@ class Answer < ApplicationRecord
         foreign_key: :question_id,
         class_name: :Question
     
+	has_many :upvotes,
+		foreign_key: :answer_id,
+		class_name: :Upvote
+	
 end
