@@ -29,6 +29,10 @@ class User < ApplicationRecord
         foreign_key: :user_id,
         class_name: :Answer
 
+	has_many :upvotes,
+		foreign_key: :user_id,
+		class_name: :Upvote
+
     # Getter for password
     attr_reader :password
     after_initialize :ensure_session_token
