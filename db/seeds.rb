@@ -226,6 +226,7 @@ Answer.create(user_id: u2.id, question_id: q36.id, body: "LinkedIn is the world'
 Answer.create(user_id: u5.id, question_id: q37.id, body: "YouTube is an American online video sharing service where users can create their own profile, upload videos, watch, like and comment on other videos.")
 Answer.create(user_id: u1.id, question_id: q41.id, body: "Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.")
 Answer.create(user_id: u1.id, question_id: q42.id, body: "It's great!")
+Answer.create(user_id: creator.id, question_id: q54.id, body: "DNA stands for Deoxyribonucleic acid.")
 Answer.create(user_id: guest.id, question_id: q56.id, body: "Isaac Newton")
 Answer.create(user_id: guest.id, question_id: q61.id, body: "The giraffe is the tallest land animal in the world.")
 Answer.create(user_id: guest.id, question_id: q64.id, body: "The heart")
