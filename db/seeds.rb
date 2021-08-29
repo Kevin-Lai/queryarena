@@ -238,6 +238,7 @@ Answer.create(user_id: guest.id, question_id: q63.id, body: "Water boils at 212Â
 Answer.create(user_id: guest.id, question_id: q64.id, body: "The heart")
 Answer.create(user_id: guest.id, question_id: q65.id, body: "118")
 Answer.create(user_id: u5.id, question_id: q66.id, body: "The Milky Way Galaxy")
+Answer.create(user_id: u5.id, question_id: q67.id, body: "Magma is extremely hot liquid and semi-liquid rock located under Earth's surface. When magma flows onto Earth's surface, it is called lava.")
 Answer.create(user_id: guest.id, question_id: q68.id, body: "The Nile River, located in Egypt, is the longest river on Earth.")
 Answer.create(user_id: guest.id, question_id: q69.id, body: "Herbivores")
 Answer.create(user_id: guest.id, question_id: q70.id, body: "Carnivores")
