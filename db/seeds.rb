@@ -242,6 +242,7 @@ Answer.create(user_id: u5.id, question_id: q67.id, body: "Magma is extremely hot
 Answer.create(user_id: guest.id, question_id: q68.id, body: "The Nile River, located in Egypt, is the longest river on Earth.")
 Answer.create(user_id: guest.id, question_id: q69.id, body: "Herbivores")
 Answer.create(user_id: guest.id, question_id: q70.id, body: "Carnivores")
+Answer.create(user_id: u7.id, question_id: q71.id, body: "32 adult teeth in total")
 Answer.create(user_id: u3.id, question_id: q80.id, body: "The Giant Hummingbird beats its wings 10-15 times per second.")
 Answer.create(user_id: creator.id, question_id: q80.id, body: "The fastest recorded rate is about 80 beats per second on an Amethyst Woodstar Hummingbird.")
 Answer.create(user_id: u2.id, question_id: q80.id, body: "North American hummingbirds average around 53 beats per second in normal flight.")
