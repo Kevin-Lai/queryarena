@@ -9,6 +9,7 @@
 User.delete_all
 Question.destroy_all
 Answer.destroy_all
+Upvotes.destroy_all
 
 guest = User.create!(
     email: 'guest@queryarena.com',
