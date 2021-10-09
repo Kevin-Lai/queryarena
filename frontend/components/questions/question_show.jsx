@@ -130,21 +130,16 @@ class QuestionShow extends React.Component{
     }
 
     addUpvote(answerId){
-
         let upvote = {
             answer_id: answerId
         };
 
-        //debugger
-
-        this.props.createUpvote(upvote);
-        this.handleAnswers();
+        this.props.createUpvote(upvote).then(()=>{
+            window.location.reload();
+        });
     }
 
     removeUpvote(upvotes){
-
-        //debugger
-
         if(upvotes){
             let upvoteId = 0;
 
@@ -155,8 +150,9 @@ class QuestionShow extends React.Component{
                 }
             }
     
-            this.props.deleteUpvote(upvoteId);
-            this.handleAnswers();
+            this.props.deleteUpvote(upvoteId).then(()=>{
+                window.location.reload();
+            });
         }
     }
 

@@ -10,7 +10,9 @@ const QuestionReducer = (state = {}, action) => {
     
     switch (action.type) {
         case RECEIVE_QUESTIONS:
-            newState = action.questions;
+            const questions = {};
+            action.questions.map(question => questions[question.id] = question);
+            newState = questions;
             return newState;
         case RECEIVE_QUESTION:
             //debugger

@@ -6,7 +6,9 @@ const SearchReducer = (state = {}, action) => {
     
     switch (action.type) {
         case RECEIVE_SEARCH_RESULTS:
-            newState = action.results;
+            const results = {};
+            action.results.map(question => results[question.id] = question);
+            newState = results;
             return newState;
         default:
             return state;
