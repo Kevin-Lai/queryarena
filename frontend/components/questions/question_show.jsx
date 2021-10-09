@@ -20,6 +20,8 @@ class QuestionShow extends React.Component{
         this.handleSubmit = this.handleSubmit.bind(this);
         this.showAnswerForm = this.showAnswerForm.bind(this);
         this.handleDeleteQuestion = this.handleDeleteQuestion.bind(this);
+        this.addUpvote = this.addUpvote.bind(this);
+        this.removeUpvote = this.removeUpvote.bind(this);
     }
 
     componentDidMount(){
@@ -127,22 +129,60 @@ class QuestionShow extends React.Component{
         }
     }
 
+    addUpvote(answerId){
+
+        let upvote = {
+            answer_id: answerId
+        };
+
+        //debugger
+
+        this.props.createUpvote(upvote);
+        this.handleAnswers();
+    }
+
+    removeUpvote(upvotes){
+
+        //debugger
+
+        if(upvotes){
+            let upvoteId = 0;
+
+            for(let i = 0; i<upvotes.length; i++){
+                if(upvotes[i].user_id === this.props.currentUserId){
+                    upvoteId = upvotes[i].id;
+                    break;
+                }
+            }
+    
+            this.props.deleteUpvote(upvoteId);
+            this.handleAnswers();
+        }
+    }
+
     render(){
         if (!this.state.question){
             return null;
         }
 
-        let list = this.state.question.answers.map( (answer, index) => {
+        // Answers with more upvotes will appear at the top of the list.
+        // Sort according to most upvotes.
+        let list = this.state.question.answers.sort((a,b)=>b.upvotes.length-a.upvotes.length).map( (answer, index) => {
+                //debugger
                 return (
                     <li className="answer-item" key={"answer #" + index}>
                         {answer.body}
                         <div className="temp-space"></div>
-                        {
-                            answer.user_id === this.props.currentUserId ? <div>
-                                <button className="question-create-cancel-button" onClick={()=>this.showAnswerForm("Update Answer")}>📝 Edit</button>
-                                <button className="question-create-cancel-button" onClick={()=>this.handleDeleteAnswer()}>❌ Delete</button>
-                            </div> : ""
-                        }
+                        <div className="answer-buttons">
+                            <button className="question-create-cancel-button" onClick={()=>this.addUpvote(answer.id)}>⬆️ {answer.upvotes ? answer.upvotes.length : 0}</button>
+                            <button className="question-create-cancel-button" onClick={()=>this.removeUpvote(answer.upvotes)}>⬇️</button>
+                            {
+                                answer.user_id === this.props.currentUserId ? <div>
+                                    <button className="question-create-cancel-button" onClick={()=>this.showAnswerForm("Update Answer")}>📝 Edit</button>
+                                    <button className="question-create-cancel-button" onClick={()=>this.handleDeleteAnswer()}>❌ Delete</button>
+                                </div> : ""
+                            }
+                        </div>
                     </li>
                 )
             }

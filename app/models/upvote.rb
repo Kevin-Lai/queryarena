@@ -13,7 +13,7 @@ class Upvote < ApplicationRecord
     # for Rails 5, when you write a belongs_to, it auto validates the presence of that foreign key
 
     validates :user_id, :answer_id, presence: true
-    validates :answer_id, uniqueness: {scope: user_id}
+    #validates :user_id, uniqueness: {scope: answer_id}
 
     belongs_to :user,
         foreign_key: :user_id,
