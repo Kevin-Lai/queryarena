@@ -1,6 +1,6 @@
 # Query Arena
 
-[Query Arena Live](https://query-arena.herokuapp.com/#/)
+[Query Arena Repository](https://github.com/Kevin-Lai/queryarena)
 
 ## Table of Contents
 * [Background](#background)
