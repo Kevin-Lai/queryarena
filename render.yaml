@@ -25,7 +25,8 @@ services:
     name: app-frontend
     branch: master
     runtime: static
-    buildCommand: cd frontend; npm install; npm run webpack
+    buildCommand: "cd frontend && npm install"
+    startCommand: "npm run webpack"
     staticPublishPath: ./frontend/build/
     # Build and deploy `app-frontend` if any `js` file changes,
     # but ignore any test files.
