@@ -6,7 +6,7 @@ databases:
 
 services:
   - type: web
-    name: mysite
+    name: app-backend
     runtime: ruby
     plan: free
     buildCommand: "./bin/render-build.sh"
@@ -21,3 +21,16 @@ services:
         sync: false
       - key: WEB_CONCURRENCY
         value: 2 # sensible default
+  - type: web
+    name: app-frontend
+    branch: master
+    runtime: static
+    buildCommand: cd frontend; npm install; npm run webpack
+    staticPublishPath: ./frontend/build/
+    # Build and deploy `app-frontend` if any `js` file changes,
+    # but ignore any test files.
+    buildFilter:
+      paths:
+      - frontend/**/*.js
+      ignoredPaths:
+      - frontend/**/*.test.js  
