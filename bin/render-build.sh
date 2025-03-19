@@ -8,9 +8,7 @@ bundle exec rails assets:precompile
 bundle exec rails assets:clean
 
 # Build commands for the frontend
-rm -rf public
 npm install && npm run build
-cp -a build/. public/
 
 # Seed the db
 bundle exec rails db:migrate
