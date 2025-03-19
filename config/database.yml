@@ -79,7 +79,11 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: queryarena_production
-  username: queryarena
-  password: <%= ENV['QUERYARENA_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+
+
+# production:
+#   <<: *default
+#   database: queryarena_production
+#   username: queryarena
+#   password: <%= ENV['QUERYARENA_DATABASE_PASSWORD'] %>

@@ -28,4 +28,4 @@
 
 bundle.js*
 
-/public/assets
+.env
